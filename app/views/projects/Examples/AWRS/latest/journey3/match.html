@@ -1,0 +1,176 @@
+{{<layout}}
+
+{{$pageTitle}}
+	HMRC > BRAMA 
+{{/pageTitle}}
+
+{{$propositionHeader}}
+<div class="header-proposition">
+  <div class="content">
+    <a href="#" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="#" id="proposition-name">Alcohol Wholesaler Registration Scheme (AWRS)</a>
+    </nav>
+  </div>
+</div>
+{{/propositionHeader}}
+
+{{$content}}
+
+<link rel="stylesheet" href="http://hmrc-prototype.herokuapp.com/assets/stylesheets/application.css">
+<script src="http://hmrc-prototype.herokuapp.com/assets/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+<script src="/http://hmrc-prototype.herokuapp.com/assets/javascripts/vendor/jquery.js"></script>
+
+<main id="content" role="main">
+
+  <div>
+    <div class="service-info" style="padding-bottom:10px; margin-bottom:0px; border-bottom:none;">
+      <div class="logo">
+        <span class="organisation-logo organisation-logo-medium" style="margin-left:0px;">HM Revenue &amp; Customs</span>
+      </div>
+
+      <div class="div-right">
+        <p class="brama-logged">John Smith &nbsp;&nbsp;&nbsp;<a href="gov_uk" class="text-small">Sign out</a></p> 
+      </div>
+    </div>
+  </div> 
+
+  <p class="text-section">AWRS application</p>
+
+  <div class="brama-spacer5"></div>
+
+  <h2 class="heading-large brama-shrink-padding-5">About your business details</h2>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="brama-spacer2"></div>
+
+      <p>Before registering, you need to confirm your business details.</p>
+
+      <div class="brama-spacer5"></div>
+
+      <h4 class="heading-medium brama-shrink-padding text-bold2">What is your business type?</h4>
+
+      <div class="brama-spacer"></div>
+
+      <div class="form-group form-group-compound">
+          <form>
+              <div>
+                <label class="block-label">
+                <input type="radio" value="1" name="same" id="1" onChange="change_link();">
+                    Limited Company
+                </label>
+                <div>
+                <label class="block-label">
+                <input type="radio" value="2" name="same" id="2" onChange="change_link();">
+                    Sole Trader / Self-employed
+                </label>
+              </div>
+              <div>
+                <label class="block-label">
+                <input type="radio" value="3" name="same" id="3" onChange="change_link();">
+                    Business Partnership
+                </label>
+              </div>
+              <div>
+                <label class="block-label">
+                <input type="radio" value="4" name="same" id="4" onChange="change_link();">
+                    Limited Partnership
+                </label>
+              </div>
+              <div>
+                <label class="block-label">
+                <input type="radio" value="5" name="same" id="5" onChange="change_link();">
+                    Limited Liability Partnership
+                </label>
+                <div>
+                <label class="block-label">
+                <input type="radio" value="6" name="same" id="6" onChange="change_link();">
+                    Unincorporated Association
+                </label>
+              </div>
+              </div>
+          </form>
+    </div>
+
+        <div class="brama-spacer"></div>
+
+        <div class="brama-spacer"></div>
+
+        <div id='buttonChange'><input type='submit' value='Continue' class='button'></div>
+
+        <div class="brama-spacer" id="here"></div>
+
+        <a href="#here" onclick="document.getElementById('hidden-text').style.display = 'inline-block';" class="brama-vertically-centered-text2">Cancel</a>
+
+        <div class="ated-spacer"></div>
+
+        <div id="hidden-text" class="panel-indent">    
+
+        <p>The registration process will be cancelled and you will be signed out. <br>You can restart registration at any time. <a href="../start_page">Sign out</a></p>
+
+        <div class="ated-spacer"></div>
+
+        <div class="ated-spacer"></div>
+
+        </div>
+
+      </div>
+    </div>
+
+</main>
+
+<script>
+
+function change_link()
+{
+  if (document.getElementById("1").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_1'><input type='submit' value='Continue' class='button'></a>";
+  }
+  else if (document.getElementById("2").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_2'><input type='submit' value='Continue' class='button'></a>";
+  }
+  else if (document.getElementById("3").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_3'><input type='submit' value='Continue' class='button'></a>";
+  }
+  else if (document.getElementById("4").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_4'><input type='submit' value='Continue' class='button'></a>";
+  }
+  else if (document.getElementById("5").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_5'><input type='submit' value='Continue' class='button'></a>";
+  }
+  else if (document.getElementById("6").checked)
+  {
+    document.getElementById("buttonChange").innerHTML = "<a href = 'match_6'><input type='submit' value='Continue' class='button'></a>";
+  }
+
+}
+
+    document.getElementById("hidden-form-non").style.display = 'none';
+    document.getElementById("hidden-form-1").style.display = 'none';
+    document.getElementById("hidden-form-2").style.display = 'none';
+    document.getElementById("hidden-form-3").style.display = 'none';
+    document.getElementById("hidden-form-4").style.display = 'none';
+    document.getElementById("hidden-form-5").style.display = 'none';
+    document.getElementById("hidden-form-6").style.display = 'none';
+
+</script>
+
+<script>
+    <!--
+      document.getElementById("hidden-text").style.display = 'none';
+    //-->
+</script>
+
+{{/content}}
+
+{{/layout}}
+
+<a href = "../../../../index">BRAMA</a>
+<a href = "../awrs_index">AWRS</a>

@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
+<!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>AWRS - Search - GOV.UK</title>
+<script type="text/javascript">
+      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    </script><!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-6820d35a129a3ffde628d8447156c5dc.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie6-4ce1b714659f23f4b262761bb2410b40.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie7-5dacabc4c21165dd2db29145e15eb57c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie8-0153d61aaa359828709c0429cb331cfe.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-print-95606431bbfe23b0e4ee9e5ed3346c47.css" media="print" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["https://assets.digital.cabinet-office.gov.uk/static/fonts-ie8-1e4512e11cb3ee77b91f723129629e95.css"]},
+       c="https://assets.digital.cabinet-office.gov.uk/static/vendor/goog/webfont-debug-96870cf9f159ed811fd43c39bdf4656b.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]--><!--[if gte IE 9]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/fonts-83e596ae63d072e22b7f34d2b5482bde.css" media="all" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if lt IE 9]>
+      <script src="https://assets.digital.cabinet-office.gov.uk/static/ie-fc5bd25c5f46587b9bff917417ab2b7f.js" type="text/javascript"></script>
+    <![endif]--><link rel="shortcut icon" href="https://assets.digital.cabinet-office.gov.uk/static/favicon-9269d2d9f40d20236f60a3dbc448679a.ico" type="image/x-icon">
+<!-- Size for iPad and iPad mini (high resolution) --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-152x152-58591dcff066ba321b89a9e208ccedab.png">
+<!-- Size for iPhone and iPod touch (high resolution) --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-120x120-b6a680ead8eb531b9c28cc056836ad06.png">
+<!-- Size for iPad 2 and iPad mini (standard resolution) --><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-76x76-17dd3f1e168561f9099ba92e3292e607.png">
+<!-- Default non-defined size, also used for Android 2.1+ devices --><link rel="apple-touch-icon-precomposed" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-60x60-dc9aa421bedcf2c08c4e8f3f230f780d.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="https://assets.digital.cabinet-office.gov.uk/static/opengraph-image-85fc698c83c77d8d8cb5467a44cc12a5.png">
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/static-e826b001509ad8acb5293bc8dfb7c7a9.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie6-5be111e96e185115bbfa4bec0ea02f2f.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie7-df9f4756ea346d9ecaa2c7128930fbd1.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie8-aef6a13db6843fa6e7670ddf7d57c62c.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 8;</script><![endif]--><link href="https://assets.digital.cabinet-office.gov.uk/static/print-885c0e730d8d8e704542e8304c523b9b.css" media="print" rel="stylesheet" type="text/css">
+<link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-5289e97509d7391c59a7b7aeb42fab71.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><link rel="alternate" type="application/json" href="/api/search.json?q=awrs">
+<!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-164728b4eaeb34f78f5dfebc9835070b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-bd73ec9f8073a24f465c3f73c711e2ba.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-74fc1be3c067d7e85c72e239e0330bbc.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><meta name="govuk:section" content="search">
+<meta name="govuk:format" content="search">
+<meta name="govuk:search-result-count" content="29">
+</head>
+<body class="mainstream search">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+      <div class="outer-block">
+        <div class="inner-block">
+            <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+        </div>
+      </div>
+    </div>
+    <!--end global-cookie-message-->
+
+    <header role="banner" id="global-header" class=""><div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt=""> GOV.UK
+            </a>
+          </div>
+            
+
+  
+
+        </div>
+        
+      </div>
+    </header><!--end header--><div id="user-satisfaction-survey-container" data-survey-url="https://www.surveymonkey.com/s/6HZFSVC"></div>
+
+    
+
+
+    <div id="global-header-bar">
+      <div class="inner-block">
+        <div class="header-bar"></div>
+      </div>
+    </div>
+    <!--end global-header-bar-->
+
+        <div id="global-breadcrumb" class="header-context">
+      <ol role="breadcrumbs" class="group">
+<li><a href="/">Home</a></li>
+      <li><strong><a href="/search">Search</a></strong></li>
+</ol>
+</div>
+
+  <div id="wrapper" class="">
+      
+        
+<main id="content" role="main" class="group search"><form action="/search" method="get" accept-charset="utf-8" role="search" class="js-live-search-form">
+    <div class="search-header">
+      
+      
+      
+      <div class="searchfield">
+        <fieldset class="search-input">
+<label for="search-main">
+              <h1>Search results for <span class="visuallyhidden">“AWRS”</span>
+</h1>
+          </label>
+          <input type="search" name="q" value="AWRS" id="search-main">
+</fieldset>
+<fieldset class="search-submit">
+<button type="submit" class="button">Search</button>
+        </fieldset>
+</div>
+</div>
+
+    <div id="results" class="js-live-search-results-block">
+      <div aria-live="assertive" class="js-aria-live-count visuallyhidden">29 found</div>
+        <div class="filter-form">
+    <div class="inner-block">
+      <p class="info">Filter by:</p>
+
+        <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+          <div class="head">
+            <span class="legend">Organisations</span>
+            <div class="controls">
+              <a class="clear-selected  js-hidden">Remove filters</a>
+              <div class="toggle"></div>
+            </div>
+          </div>
+          <div class="checkbox-container" id="organisations-filter">
+            <ul>
+<li>
+                  <input type="checkbox" name="filter_organisations[]" value="british-cattle-movement-service" id="british-cattle-movement-service"><label for="british-cattle-movement-service">British Cattle Movement Service (7)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="hm-revenue-customs" id="hm-revenue-customs"><label for="hm-revenue-customs">HM Revenue &amp; Customs (5)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="land-registry" id="land-registry"><label for="land-registry">Land Registry (5)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="ministry-of-defence" id="ministry-of-defence"><label for="ministry-of-defence">Ministry of Defence (4)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="defence-infrastructure-organisation" id="defence-infrastructure-organisation"><label for="defence-infrastructure-organisation">Defence Infrastructure Organisation (2)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="department-for-work-pensions" id="department-for-work-pensions"><label for="department-for-work-pensions">Department for Work and Pensions (2)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="department-for-business-innovation-skills" id="department-for-business-innovation-skills"><label for="department-for-business-innovation-skills">Department for Business, Innovation &amp; Skills (1)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="department-for-environment-food-rural-affairs" id="department-for-environment-food-rural-affairs"><label for="department-for-environment-food-rural-affairs">Department for Environment, Food &amp; Rural Affairs (1)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="foreign-commonwealth-office" id="foreign-commonwealth-office"><label for="foreign-commonwealth-office">Foreign &amp; Commonwealth Office (1)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="prime-ministers-office-10-downing-street" id="prime-ministers-office-10-downing-street"><label for="prime-ministers-office-10-downing-street">Prime Minister's Office, 10 Downing Street (1)</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filter_organisations[]" value="rural-payments-agency" id="rural-payments-agency"><label for="rural-payments-agency">Rural Payments Agency (1)</label>
+                </li>
+            </ul>
+</div>
+        </div>
+
+      <div class="submit js-live-search-fallback">
+        <input type="submit" class="button" value="Submit filters">
+</div>
+    </div>
+  </div>
+
+<div class="results-block">
+  <div class="inner-block js-live-search-results-list">
+    <div class="result-count " id="js-live-search-result-count" aria-hidden="true">
+        29 results found
+    </div>
+    
+      <ol class="results-list" id="js-live-search-results" start="1">
+<li>
+              <h3><a href="start_page">Apply for Alcohol Wholesaler Registration Scheme (AWRS)</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>For alcohol wholesaler companies.</p>
+        
+        
+        
+        
+            </li>
+
+            <li>
+              <h3><a href="https://www.gov.uk/the-alcohol-wholesaler-registration-scheme-awrs">The Alcohol Wholesaler Registration Scheme (AWRS)</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Information about the scheme which starts in October 2015, including details of the fit and proper tests.</p>
+        
+        
+        
+        
+            </li>
+<!-- <li>
+              <h3><a href="start_page">Apply for Alcohol Wholesaler Registration Scheme (AWRS)</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Start page to apply online to the AWRS scheme. </p>
+        
+        
+        
+        
+            </li> 
+<li>
+              <h3><a href="https://www.gov.uk/the-alcohol-wholesaler-registration-scheme-awrs">The Alcohol Wholesaler Registration Scheme (AWRS)</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Information about the scheme which starts in October 2015, including details of the fit and proper tests. </p>
+        
+        
+        
+        
+            </li> -->
+            <li>
+              <h3><a href="/government/publications/vat-notes-2014-issue-4">VAT Notes 2014 Issue 4</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 19 January 2015 </li>
+                    <li> Guidance </li>
+                    <li> <abbr title="HM Revenue &amp; Customs">HMRC</abbr> </li>
+                </ul>
+<p>This note explains changes to VAT for businesses. </p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/alcohol-wholesaler-registration-scheme-awrs">Alcohol Wholesaler Registration Scheme (AWRS)</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 14 August 2014 </li>
+                    <li> News story </li>
+                    <li> <abbr title="HM Revenue &amp; Customs">HMRC</abbr> </li>
+                </ul>
+<p>Find out about the AWRS which aims to tackle alcohol duty fraud by making the wholesale of illicit alcohol much more difficult.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/cyfraddau-isafswm-cyflog-cenedlaethol">Cyfraddau'r Isafswm Cyflog Cenedlaethol</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Welsh/Cymraeg: Mae cyfraddau’r Isafswm Cyflog Cenedlaethol yn berthnasol o 1 Hydref 2014 ymlaen – Isafswm Cyflog Cenedlaethol, oed, prentisiaethau</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/cadw-cofrestr-daliad-ar-gyfer-gwartheg">Cadw cofrestr daliad ar gyfer gwartheg</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Rhaid i bob ceidwad gwartheg gadw cofrestr daliad sy'n dangos genedigaethau, symudiadau a marwolaethau'r gwartheg, y buail a'r byfflos y mae'n gyfrifol amdanynt.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/rhoi-gwybod-am-symudiadau-gwartheg-au-cofnodi">Rhoi gwybod am symudiadau gwartheg a'u cofnodi</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Mae'n rhaid i chi gofnodi pob achos o symud gwartheg, buail neu fyfflos i'ch daliad neu oddi arno a hysbysu Gwasanaeth Symud Gwartheg Prydain ohono.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/lwfans-ceisio-gwaith">Lwfans Ceisio Gwaith</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Welsh/Cymraeg: Lwfans Ceisio Gwaith – gan gynnwys Lwfans Ceisio Gwaith ar sail cyfraniadau, Lwfans Ceisio Gwaith ar sail incwm, pwy sy'n gymwys, beth rydych chi'n ei gael a sut mae hawlio (gan gynnwys adhawlio cyflym)</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/rhoi-tagiau-clust-gwartheg-newydd-yn-lle-rhai-syn-cael-eu-colli-neu-eu-difrodi">Rhoi tagiau clust gwartheg newydd yn lle rhai sy’n cael eu colli neu eu difrodi</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Yr hyn y dylech ei wneud os caiff tag clust ei golli neu os na ellir ei ddarllen mwyach, neu os ydych wedi prynu anifail nad yw wedi'i dagio neu anifail sydd â thagiau nas cymeradwywyd.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/anfon-gwybodaeth-am-wartheg-ar-lein-neu-dros-y-ffon">Anfon gwybodaeth am wartheg ar-lein neu dros y ffôn</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Gallwch anfon y wybodaeth ddiweddaraf i Wasanaeth Symud Gwartheg Prydain gan ddefnyddio SOG Ar-lein, meddalwedd fferm gymeradwy a llinell ffôn hunanwasanaeth.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/y-cynllun-dosbarthu-carcasau-eidion-dosbarthu-carcasau">Y cynllun Dosbarthu Carcasau Eidion: dosbarthu carcasau</a></h3>
+        
+        
+        
+        
+        
+        
+              <p>Mae'n rhaid i ladd-dai eidion drin, categoreiddio, dosbarthu, pwyso a labelu carcasau yn unol â'r rheoliadau a hysbysu cyflenwyr o'r canlyniadau.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/beth-iw-wneud-ar-ol-i-lo-gael-ei-eni">Beth i'w wneud ar ôl i lo gael ei eni</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Mae'n rhaid i geidwaid gwartheg dagio lloi newydd-anedig, gwneud cais am basbortau a chofnodi'r manylion cywir ar gostrestr y daliad. </p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/rhoi-gwybod-am-farwolaethau-gwartheg-ar-y-daliad-au-cofnodi">Rhoi gwybod am farwolaethau gwartheg ar y daliad a'u cofnodi</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Pan fydd gwartheg yn marw ar y fferm neu ar safle arall, yn hytrach nag yn y lladd-dy, mae'n rhaid i'r ceidwad gofnodi'r farwolaeth a hysbysu GSGP ohoni.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/cael-pasbort-gwartheg">Cael pasbort gwartheg</a></h3>
+        
+        
+        
+                <p class="meta crumbtrail">
+                  <span class="visuallyhidden">Part of </span>
+                  <span class="section">Business</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsection">Farming</span>
+                    <span class="visuallyhidden">, </span>
+                    <span class="subsubsection">Livestock</span>
+                </p>
+        
+        
+        
+              <p>Rhaid i'r holl wartheg, byfflos a buail gael pasbortau, sy'n unigryw i'r anifail ac yn aros gyda'r anifail gydol ei oes.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/training-areas-in-scotland-support-major-multinational-exercise">Training areas in Scotland support major multinational exercise</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 25 October 2013 </li>
+                    <li> News story </li>
+                    <li> <abbr title="Defence Infrastructure Organisation">DIO</abbr> </li>
+                </ul>
+<p>Military personnel have been training in Scotland; using Cape Wrath and Air Weapons Range (AWR) Tain during a major exercise.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/new-hq-for-lincolnshire-air-weapons-range">New HQ for Lincolnshire air weapons range</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 12 July 2010 </li>
+                    <li> Announcement </li>
+                    <li> <abbr title="Ministry of Defence">MOD</abbr> </li>
+                </ul>
+<p>A new Headquarters and improved facilities at Air Weapons Range (AWR) Holbeach which provides pre-deployment training for Armed Forces headed for Afghanistan.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/berkshire-byelaws">Berkshire Byelaws</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 12 July 2013 </li>
+                    <li> Guidance </li>
+                    <li> <abbr title="Ministry of Defence">MOD</abbr>, <abbr title="Defence Infrastructure Organisation">DIO</abbr> </li>
+                </ul>
+<p>Byelaws detailing access to Defence Estate land in Berkshire </p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/summary-of-responses-to-consultation-on-proposals-on-non-packaging-agricultural-plastics-published">Summary of responses to consultation on proposals on non-packaging agricultural plastics published</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 18 October 2010 </li>
+                    <li> Press release </li>
+                    <li> <abbr title="Department for Environment, Food &amp; Rural Affairs">Defra</abbr> </li>
+                </ul>
+<p>Summary of responses to a consultation on a possible producer responsibility scheme for non-packaging agricultural plastics (NPAP) published.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/speeches/wales-the-language-and-the-people">Wales: the language and the people</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  1 March 2013 </li>
+                    <li> Speech </li>
+                    <li> <abbr title="Foreign &amp; Commonwealth Office">FCO</abbr> </li>
+                    <li> Albania </li>
+                </ul>
+<p>British Ambassador to Albania's speech on Saint David’s Day.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/agency-workers-regulations-guidance-published">Agency Workers Regulations guidance published</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  6 May 2011 </li>
+                    <li> Announcement </li>
+                    <li> <abbr title="Department for Business, Innovation &amp; Skills">BIS</abbr> </li>
+                </ul>
+<p>The guidance, which has been produced in partnership with a wide range of businesses, trade unions and recruitment agency representatives, will…</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/foi-responses-released-by-mod-week-commencing-23-march-2015">FOI responses released by MOD: week commencing 23 March 2015</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 14 April 2015 </li>
+                    <li> FOI release </li>
+                    <li> <abbr title="Ministry of Defence">MOD</abbr> </li>
+                </ul>
+<p>Ministry of Defence (MOD) Freedom of Information (FOI) responses released during the week commencing 23 March 2015.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/foi-responses-released-by-mod-week-commencing-25-august-2014">FOI responses released by MOD: week commencing 25 August 2014</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  1 September 2014 </li>
+                    <li> FOI release </li>
+                    <li> <abbr title="Ministry of Defence">MOD</abbr> </li>
+                </ul>
+<p>Ministry of Defence (MOD) Freedom of Information (FOI) responses released during the week commencing 25 August 2014.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/vat-notes-2015-issue-1">VAT Notes 2015 Issue 1</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  6 March 2015 </li>
+                    <li> Guidance </li>
+                    <li> <abbr title="HM Revenue &amp; Customs">HMRC</abbr> </li>
+                </ul>
+<p>This note explains changes to VAT for businesses.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/news/welsh-guide-to-legislation">Welsh guide to legislation</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 24 August 2007 </li>
+                    <li> Press release </li>
+                    <li> <abbr title="Prime Minister's Office, 10 Downing Street">Number 10</abbr> </li>
+                </ul>
+<p class="historic">
+                  First published during the 2005 to 2010 Labour government
+                </p>
+        
+              <p>Canllaw i ddeddfwriaeth Yr enw ffurfiol ar ddeddf yw Deddf Seneddol. Cyn y daw unrhyw un o bolisiau'r llywodraeth yn ddeddf, rhaid iddo'n gyntaf gael ei osod allan ar ffurf Mesur, neu Ddeddf ar ffurf ddrafft....</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/issue-briefing-tax-credits-renewals">Issue briefing: tax credits renewals</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 24 July 2014 </li>
+                    <li> Corporate report </li>
+                    <li> <abbr title="HM Revenue &amp; Customs">HMRC</abbr> </li>
+                </ul>
+<p>This briefing provides information on how tax credits customers should report changes in their circumstances and the importance of renewing their tax credits.
+</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/applications-in-connection-with-court-proceedings-insolvency-and-tax-liability">Court proceedings, insolvency and tax liability: applications (PG43)</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 13 November 2014 </li>
+                    <li> Guidance </li>
+                    <li> Land Registry </li>
+                </ul>
+<p>Advice on obtaining information held by Land Registry regarding court proceedings, insolvency and tax liability (practice guide 43).</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/about-the-house-price-index">About the House Price Index</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 20 April 2015 </li>
+                    <li> Guidance </li>
+                    <li> Land Registry </li>
+                </ul>
+<p>The House Price Index (HPI) is an official statistic that captures changes in the value of residential properties in England and Wales.</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/franchises">Franchises: registration under the Land Registration Act 2002 (PG18)</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li> 13 October 2003 </li>
+                    <li> Guidance </li>
+                    <li> Land Registry </li>
+                </ul>
+<p>Advice on the registration of franchises under the Land Registration Act 2002 (practice guide 18).</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/evidence-of-identity-conveyancers">Evidence of identity: conveyancers (PG67)</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  7 April 2015 </li>
+                    <li> Guidance </li>
+                    <li> Land Registry </li>
+                </ul>
+<p>This guide explains when evidence of identity is required and how it should be given. It is aimed at conveyancers (practice guide 67).</p>
+        
+        
+        
+        
+            </li>
+            <li>
+              <h3><a href="/government/publications/inspection-and-application-for-official-copies">Inspection and application for official copies (PG11)</a></h3>
+        
+        
+        
+        
+                <ul class="attributes">
+<li>  4 November 2014 </li>
+                    <li> Guidance </li>
+                    <li> Land Registry </li>
+                </ul>
+<p>How to apply to inspect or obtain official copies of leases and charges referred to in the register (practice guide 11).  </p>
+        
+        
+        
+        
+            </li>
+      </ol>
+<ul class="previous-next-navigation"></ul>
+</div>
+</div>
+
+    </div>
+  </form>
+</main><h3 class="visuallyhidden">No more results for “awrs”. <a href="#search-main">Try a different search?</a>
+</h3>
+
+</div>
+
+
+    <footer class="group js-footer" id="footer" role="contentinfo"><div class="footer-wrapper">
+          <div class="footer-categories">
+    <div class="footer-explore">
+      <h2>Services and information</h2>
+
+      <ul>
+<li><a href="/browse/benefits">Benefits</a></li>
+        <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
+        <li><a href="/browse/business">Business and self-employed</a></li>
+        <li><a href="/browse/citizenship">Citizenship and living in the UK</a></li>
+        <li><a href="/browse/justice">Crime, justice and the law</a></li>
+        <li><a href="/browse/disabilities">Disabled people</a></li>
+        <li><a href="/browse/driving">Driving and transport</a></li>
+        <li><a href="/browse/education">Education and learning</a></li>
+      </ul>
+<ul>
+<li><a href="/browse/employing-people">Employing people</a></li>
+        <li><a href="/browse/environment-countryside">Environment and countryside</a></li>
+        <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+        <li><a href="/browse/tax">Money and tax</a></li>
+        <li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
+        <li><a href="/visas-immigration">Visas and immigration</a></li>
+        <li><a href="/browse/working">Working, jobs and pensions</a></li>
+      </ul>
+</div>
+
+    <div class="footer-inside-government">
+      <h2>Departments and policy</h2>
+
+      <ul>
+<li><a href="/government/how-government-works">How government works</a></li>
+        <li><a href="/government/organisations">Departments</a></li>
+        <li><a href="/government/world">Worldwide</a></li>
+        <li><a href="/government/policies">Policies</a></li>
+        <li><a href="/government/publications">Publications</a></li>
+        <li><a href="/government/announcements">Announcements</a></li>
+      </ul>
+</div>
+    <hr>
+</div>
+
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+              <h2 class="visuallyhidden">Support links</h2>
+<ul>
+<li><a href="/help">Help</a></li>
+  <li><a href="/help/cookies">Cookies</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/cymraeg">Cymraeg</a></li>
+  <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+</li>
+</ul>
+<div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+              <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-1d29c0379552e7f7ab67500dea47df2d.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/static/libs/jquery/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/static/application-0c099a75bb6b67b41890f368ea8409f4.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-2c0b4621fd76e6900a35d5a1590f16e5.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+<a href = "../../../../index">BRAMA</a>
+<a href = "../awrs_index">AWRS</a>

@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link rel="stylesheet" href="/public/stylesheets/elements.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+
+	<div class="breadcrumb">
+		<ol>
+		  <li><a class="breadcrumb_links" href="services">Home</a></li>
+		  <li><a class="breadcrumb_links" href="bankruptcies">Bankruptcies</a></li>
+		  <li><a class="breadcrumb_links" href="registrations">List of registration applications</a></li>
+		  <li class="breadcrumb_no_arrow"><span>Bankruptcy registration</span></li>
+		</ol>
+	</div>
+
+	<div class="spacer_10"></div>
+
+	<h1 class="title_36">Bankruptcy registration</h1>
+
+	<div class="spacer_5"></div>
+
+	<div class="text_16_gray">
+	    <a href="bankruptcy_registration_step_1" class="link_16 no_link_style">1. Debtor details</a> 
+	    &nbsp;&nbsp;
+	    <a href="bankruptcy_registration_step_2" class="link_16 no_link_style">2. Debtor address</a> 
+	    &nbsp;&nbsp;
+	    <a href="bankruptcy_registration_step_3" class="link_16 no_link_style">3. Court details</a> 
+	    &nbsp;&nbsp;
+	    <span class="text_16_bold">4. Review</span>
+	</div>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+
+		<!-- ///////////////////////////////// column-form ///////////////////////////////// -->
+
+	    <div class="column-form">
+
+	      	<p class="text_24_bold">4. Review</p>
+
+	      	<div class="spacer_10"></div>
+
+	      	<table class="review_table"> 
+
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Debtor details</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link_16_right" href="#">Edit</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Forename</span></td>
+					<td width="50%"><input class="form_textfield_review" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+					<td colspan="2"><input class="form_textfield_review" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Occupation</span></td>
+					<td colspan="2"><span class="text_review_table">Gardener</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+
+			<table class="review_table">   
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Debtor address</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link_16_right" href="#">Edit</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Address line 1</span></td>
+					<td width="50%"><span class="text_review_table">123 New Street</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Address line 2</span></td>
+					<td colspan="2"><span class="text_review_table">Middlebrrok</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Address line 3</span></td>
+					<td colspan="2"><span class="text_review_table">Winchester</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">County</span></td>
+					<td colspan="2"><span class="text_review_table">Hampshire</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Postcode</span></td>
+					<td colspan="2"><span class="text_review_table">SO14 1AA</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+
+			<table class="review_table">   
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Court details</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link_16_right" href="#">Edit</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="45%"><span class="text_review_table_bold">Key number</span></td>
+					<td width="50%"><span class="text_review_table">1111109</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Court name</span></td>
+					<td colspan="2"><span class="text_review_table">Portsmouth </span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Number</span></td>
+					<td colspan="2"><span class="text_review_table">998</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Year</span></td>
+					<td colspan="2"><span class="text_review_table">2015</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Date of order</span></td>
+					<td colspan="2"> 
+						<input class="form_textfield_review_day" type="text"> &nbsp;
+		        		<input class="form_textfield_review_day" type="text"> &nbsp;
+		        		<input class="form_textfield_review_year" type="text"> &nbsp;</td>
+				</tr>
+			</table>
+			   
+		    <div class="spacer_30"></div>
+
+		    <table class="review_table">   
+				<tr>
+					<td width="10%" class="no-line"><input type="checkbox" id="cb" onclick="toggle()"></td>
+					<td width="90%" class="no-line"><span class="text_review_table">I confirm I verified all above details</span></td>
+				</tr>
+			</table>
+			   
+		    <div class="spacer_10"></div>
+
+		    <div>
+	      		<table>
+	      			<tr>
+	      				<td width="50%" class="no-line">
+	      					<a href="bankruptcy_registration_confirmation">
+	      						<input type="submit" value="Register" class="form_button" id="btn" disabled></a>
+	      				</td>
+	      				<td width="50%" class="custom_3">
+					      	<a href="#" class="link_16">Reject application</a> 
+	      				</td>
+	      			</tr>
+	      		</table>
+	      	</div>
+
+	    </div>
+
+	    <!-- ///////////////////////////////// end of column-form ///////////////////////////////// -->
+
+	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
+
+	    <div class="column-scan">
+
+	      	<div>
+	      		<table>
+	      			<tr>
+	      				<td class="magnify_glass">
+	      					<a href="bankruptcy_registration_step_4_edited_magnify"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+	      				</td>
+	      				<td class="pagination_scanned_pages custom_2">
+					      	<span>Page 1 of 2 &nbsp; <a class="link_14" href="#">Next</a></span> 
+	      				</td>
+	      			</tr>
+	      		</table>
+	      	</div>
+
+	      	<img class="img_resize_big" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+
+	    </div>
+
+	    <!-- ///////////////////////////////// end of column-scan ///////////////////////////////// -->
+
+	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
+
+	    <div class="column-scan-small">
+
+	      	<div class="spacer_30"></div>
+
+	      	<div class="spacer_5"></div>
+
+	      	<img class="img_resize_small_selected" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+
+	      	<div class="spacer_10"></div>
+
+	      	<img class="img_resize_small" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+
+	    </div>
+
+	    <!-- ///////////////////////////////// end of column-scan-small ///////////////////////////////// -->
+
+  	</div>
+
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script type="text/javascript">
+ 
+function toggle() {
+    var cbChecked = document.getElementById('cb').checked;
+    document.getElementById('btn').disabled = !cbChecked;
+}
+ 
+</script>
+
+</html>

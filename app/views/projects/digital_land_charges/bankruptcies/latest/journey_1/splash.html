@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link rel="stylesheet" href="/public/stylesheets/elements.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript">
+    var url = "services";
+    var delay = "5000";
+    window.onload = function ()
+    {
+        setTimeout(GoToURL, delay);
+    }
+    function GoToURL()
+    {
+        if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
+        {
+            var referLink = document.createElement("a");
+            referLink.href = url;
+            document.body.appendChild(referLink);
+            referLink.click();
+        }
+        else { window.location.replace(url); } // All other browsers
+    }
+	</script>
+
+</head>
+
+<body style="backg_geo">
+
+<div>
+
+	<div class="spacer_10"></div>
+
+		<div class="body_middle">
+
+		    <ul>
+		    	<div class="spacer_50"></div>
+		    	<li>
+					<img src="../../../../../public/images/logo_5.png" alt="Land Registry">
+				</li>
+				<div class="spacer_30"></div>
+				<li>
+					<p class="title_36">Digital Land Charges</p>
+				</li>
+				<div class="spacer_5"></div>
+				<li>
+					<p class="text_19">Attempting to pull Land Charges into the digital age</p>
+				</li>
+				<div class="spacer_50"></div>
+				<li>
+					<img src="../../../../../public/images/people.png" alt="Digital Land Charges">
+				</li>
+				<div class="spacer_30"></div>
+				<li>
+					<p class="text_14_gray">System loading...</p>
+				</li>
+				<div class="spacer_10"></div>
+				<li>
+					<img src="../../../../../public/images/loading.gif" alt="Spinner">
+				</li>
+				<div class="spacer_20"></div>
+			</ul>
+
+		</div>
+
+</div>
+
+</body>
+
+</html>

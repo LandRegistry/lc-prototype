@@ -1,0 +1,448 @@
+{{<layout}}
+
+{{$pageTitle}}
+	HMRC > BRAMA 
+{{/pageTitle}}
+
+{{$propositionHeader}}
+<div class="header-proposition">
+  <div class="content">
+    <a href="#" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="#" id="proposition-name">Alcohol Wholesaler Registration Scheme (AWRS)</a>
+    </nav>
+  </div>
+</div>
+{{/propositionHeader}}
+
+{{$content}}
+
+<link rel="stylesheet" href="http://hmrc-prototype.herokuapp.com/assets/stylesheets/application.css">
+<script src="http://hmrc-prototype.herokuapp.com/assets/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+<script src="http://hmrc-prototype.herokuapp.com/assets/javascripts/vendor/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<main id="content" role="main">
+
+  <div>
+    <div class="service-info" style="padding-bottom:10px; margin-bottom:0px; border-bottom:none;">
+      <div class="logo">
+        <span class="organisation-logo organisation-logo-medium" style="margin-left:0px;">HM Revenue &amp; Customs</span>
+      </div>
+
+      <div class="div-right">
+        <p class="brama-logged">Paul Coward, Acme Limited &nbsp;&nbsp;&nbsp;<a href="gov_uk" class="text-small">Sign out</a></p> 
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p class="text-section">AWRS application </p>
+
+      <div class="brama-spacer5"></div>
+
+      <h2 class="heading-large brama-shrink-padding-5">Application summary</h2>
+
+        <p class="panel-indent">Once you start the application you can save and return at any time, completing the sections in any order. You must submit your application by 31 March 2016.</p>
+
+        <div class="brama-spacer"></div>
+
+          <div>
+
+            <div>
+
+              <table>
+
+                  <tr>
+                    <th scope="col" style="width:40%">Section </th>
+                    <th scope="col" style="width:15%">Status</th>
+                    <th scope="col" style="width:18%">Action</th>
+                  </tr>
+
+                  <tr id="showHide1" data-target="show_1" class="hide-styles">
+                    <td class="brama-no-line">1. Business details</td>
+                    <td class="progress_icons brama-no-line"><img src="/public/images/icon_progress_complete.png"></td>
+                    <td class="brama-no-line"><a href="#" id="showHide1" data-target="show_1" class="hide-styles">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_1">Edit details</a></td>
+                  </tr>
+
+                  <tr id="show_1">
+                    <td colspan="3" style="background-color: #e8e8e8">
+                      <table>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Place of business:</td>
+                          <td style="width:48%">Your organisation's<br>Registered address<br>Town<br>County<br>ABC 123</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>Correspondence address:</td>
+                          <td>Your organisation's<br>Registered address<br>Town<br>County<br>ABC 123</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td class="brama-no-line">Contact details:</td>
+                          <td class="brama-no-line">John Smith<br>john.smith@email.com<br>0123456789</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#"></a>2. Other premises and trading premises</td>
+                    <td class="progress_icons"><img src="/public/images/icon_progress_complete.png"></td>
+                    <td><a href="#">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_2">Edit details</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"></a>3. Directors and company secretaries</td>
+                    <td class="progress_icons"><img src="/public/images/icon_progress_complete.png"></td>
+                    <td><a href="#">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_3">Edit details</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"></a>4. Additional business information</td>
+                    <td class="progress_icons"><img src="/public/images/icon_progress_complete.png"></td>
+                    <td><a href="#">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_4">Edit details</a></td>
+                  </tr>
+                  <tr class="hide-styles " style="background-color: #e8e8e8">
+                    <td class="brama-no-line text-bold2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. About your 5 main suppliers</td>
+                    <td class="progress_icons brama-no-line"><img src="/public/images/icon_progress_incomplete.png"></td>
+                    <td class="brama-no-line"><a href="#" data-target="show_5" class="hide-styles">Hide</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_5"> </a></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="3" style="background-color: #e8e8e8">
+                      <table>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top" class="brama-no-line text-bold2">Supplier 1
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="link-small"><a href="form_5">Edit</a></span>
+                            &nbsp;
+                            <span class="text-gray3">|</span>
+                            &nbsp;
+                            <span class="link-small"><a href="#">Delete</a></span></td>
+                          <td style="width:48%" class="brama-no-line"></td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Name of alcohol supplier:</td>
+                          <td style="width:48%">Wines Limited</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>VAT registration number:</td>
+                          <td>123456</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td style="width:52%; vertical-align: top">Address details:</td>
+                          <td>Your organisation's<br>Registered address<br>Town<br>County<br>ABC 123</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top" class="brama-no-line text-bold2">Supplier 2
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="link-small"><a href="form_55">Edit</a></span>
+                            &nbsp;
+                            <span class="text-gray3">|</span>
+                            &nbsp;
+                            <span class="link-small"><a href="#">Delete</a></span></td>
+                          <td style="width:48%" class="brama-no-line"></td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Name of alcohol supplier:</td>
+                          <td style="width:48%" class="text-gray">Incomplete</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>VAT registration number:</td>
+                          <td class="text-gray">Incomplete</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td class="brama-no-line" style="width:52%; vertical-align: top">Address details:</td>
+                          <td class="brama-no-line text-gray">Incomplete</td>
+                          <td class="brama-no-line"></td>
+                        </tr>  
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!--
+                  <tr id="showHide5" data-target="show_5" class="hide-styles">
+                    <td class="brama-no-line">5. About your suppliers</td>
+                    <td class="progress_icons brama-no-line"><img src="/public/images/icon_progress_incomplete.png"></td>
+                    <td class="brama-no-line"><a href="#" id="showHide5" data-target="show_5" class="hide-styles">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_5">Edit details</a></td>
+                  </tr>
+
+                  <tr id="show_5">
+                    <td colspan="3" style="background-color: #e8e8e8">
+                      <table>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top" class="brama-no-line text-bold2">Supplier 1
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="link-small"><a href="form_5">Edit</a></span>
+                            &nbsp;
+                            <span class="text-gray3">|</span>
+                            &nbsp;
+                            <span class="link-small"><a href="#">Delete</a></span></td>
+                          <td style="width:48%" class="brama-no-line"></td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Name of alcohol supplier:</td>
+                          <td style="width:48%">Wines Limited</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>VAT registration number:</td>
+                          <td>123456</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td style="width:52%; vertical-align: top">Address details:</td>
+                          <td>17 Brick Lane <br>London<br>Great London<br>DEF 456</td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top" class="brama-no-line text-bold2">Supplier 2
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="link-small"><a href="form_55">Edit</a></span>
+                            &nbsp;
+                            <span class="text-gray3">|</span>
+                            &nbsp;
+                            <span class="link-small"><a href="#">Delete</a></span></td>
+                          <td style="width:48%" class="brama-no-line"></td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Name of alcohol supplier:</td>
+                          <td style="width:48%">Beer Exchange Limited</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>VAT registration number:</td>
+                          <td>234567</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td style="width:52%; vertical-align: top">Address details:</td>
+                          <td>4 Saints Street <br>Worcester<br>Worcestershire<br>GHI 789</td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top" class="brama-no-line text-bold2">Supplier 3
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="link-small"><a href="form_555">Edit</a></span>
+                            &nbsp;
+                            <span class="text-gray3">|</span>
+                            &nbsp;
+                            <span class="link-small"><a href="#">Delete</a></span></td>
+                          <td style="width:48%" class="brama-no-line"></td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td style="width:5%" class="brama-no-line"></td>
+                          <td style="width:52%; vertical-align: top">Name of alcohol supplier:</td>
+                          <td style="width:48%" class="text-gray">Incomplete</td>
+                          <td style="width:20%" class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td>VAT registration number:</td>
+                          <td class="text-gray">Incomplete</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+                        <tr>
+                          <td class="brama-no-line"></td>
+                          <td class="brama-no-line" style="width:52%; vertical-align: top">Address details:</td>
+                          <td class="brama-no-line text-gray">Incomplete</td>
+                          <td class="brama-no-line"></td>
+                        </tr>
+
+
+
+                      </table>
+                    </td>
+                  </tr>
+
+                  -->
+
+                  <!--
+
+                  <tr>
+                    <td><a href="#"></a>&nbsp; 7. Partnerships</td>
+                    <td class="progress_icons"><img src="/public/images/icon_progress_no_started.png"></td>
+                    <td><a href="#">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="form_7">Add details</a></td>
+                  </tr>
+
+                  -->
+
+              </table>
+
+              <div class="brama-spacer6"></div>
+
+              <table>
+                  <tr>
+                    <td class="brama-no-line align-top">
+                      <p class="text-gray">All sections must be complete before you can continue.
+                    </td>
+                    <td class="brama-no-line align-top text-align-righ">
+                      <a href="#" class="brama-no-line align-top text-align-righ"> </a></td>
+                  </tr>
+              </table>
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div class="column-third blue-line3">
+      <!--
+      <h2 class="heading-blue-line"><span class="text-medium6">Business details</span></h2> 
+      -->    
+      <p  class="text-medium5">Acme Limited</p>
+      <p class="text-medium4">Your organisation's<br>Registered address<br>Town<br>County<br>ABC 123</p>
+
+    </div>
+
+    <!--
+
+    <div class="column-third blue-line3">
+          
+      <h2 class="heading-blue-line"><span class="text-medium6">Business details</span></h2> 
+      <p class="text-medium5">Business name <br><span class="text-medium4">Acme</span></p>
+      <p class="text-medium5">Type of business <br><span class="text-medium4">Limited Company</span></p>
+      <p class="text-medium5">Address <br><span class="text-medium4">23 High Street<br>The Park<br>Gloucester<br>Gloucestershire<br>ABC 123</span></p>
+      <p class="text-medium5">VAT registration number <br><span class="text-medium4">123456</span></p>
+      <p class="text-medium5">Unique Taxpayer Reference (UTR) <br><span class="text-medium4">123456789</span></p>
+
+    </div>
+
+  -->
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!--
+
+      <div class="brama-spacer"></div>
+
+      <div><a href = "#"><input type="submit" value="Confirm and continue" class="button"></a></div>
+
+      -->
+
+      <div class="brama-spacer" id="here"></div>
+
+      <a href="#here" onclick="document.getElementById('hidden-text').style.display = 'inline-block';" class="brama-vertically-centered-text2">Cancel application</a>
+
+      <div class="ated-spacer"></div>
+
+      <div id="hidden-text" class="panel-indent">    
+
+      <p>The application process will now be cancelled and you will be signed out. We will save your application for 28 days so you can complete it later. After 28 days your application is deleted and you will have to start it again.<a href="gov_uk2">Sign out</a></p>
+
+      <div class="ated-spacer"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+<script>
+      document.getElementById("hidden-text").style.display = 'none';
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    $('#show_1').hide();
+
+    $('#showHide1').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_2').hide();
+
+    $('#showHide2').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_3').hide();
+
+    $('#showHide3').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_4').hide();
+
+    $('#showHide4').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_5').hide();
+
+    $('#showHide5').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_6').hide();
+
+    $('#showHide6').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+    $('#show_7').hide();
+
+    $('#showHide7').on('click', function(){
+      $('#' + $(this).attr('data-target')).toggle();
+      $(this).toggleClass('hide-styles').toggleClass('show-styles');
+    });
+
+  });
+</script>
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}
+
+<a href = "../../../../index">BRAMA</a>
+<a href = "../awrs_index">AWRS</a>
