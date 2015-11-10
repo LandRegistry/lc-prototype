@@ -1111,6 +1111,15 @@ td.custom_3 {
     box-sizing: border-box;
 }
 
+.column-scan2 {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .column-scan-small {
     float: left;
     width: 8%;
@@ -1131,26 +1140,32 @@ img {
     height:auto;
 }
 
-.img_resize_big{
+.img_resize_big {
     width:100%; /* you can use 540px */
     height: auto;
     border: 1px solid #000000;
 }
 
-.img_resize_big_magnified{
+.img_resize_big_magnified {
     width:100%; 
     height: auto;
     border: 1px solid red;
     outline: 1px solid #000000;
 }
 
-.img_resize_small{
+.magnified_scan {
+    width:100%; 
+    height: auto;
+    border: 2px solid #000000;
+}
+
+.img_resize_small {
     width:100%; 
     height: auto;
     border: 1px solid #bfc1c3;
 }
 
-.img_resize_small_selected{
+.img_resize_small_selected {
     width:100%; 
     height: auto;
     border: 1px solid #000000;

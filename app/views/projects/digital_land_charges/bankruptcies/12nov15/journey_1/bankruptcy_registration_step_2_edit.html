@@ -61,8 +61,8 @@
 		    </div>
 
 		    <div class="form">
-		        <label class="form_label">Address line 1</label>
-		        <input class="form_textfield" type="text" value=" Middlebrrok">
+		        <label class="form_label">Address line 2</label>
+		        <input class="form_textfield" type="text" value=" Middlebrook">
 		    </div>
 
 		    <div class="form">
@@ -82,11 +82,94 @@
 
 		    <div class="spacer_5"></div>
 
-		    <div id="address1">
+		  	<!--  
+
+		  	<div>
+		    	<a href="#here" onclick="document.getElementById('address1').style.display = 'block';" class="link_16" id="#">Add additional address</a>
+		    </div>
+
+		   	--> 
+
+		    <div>
+                          
+                <div class="spacer_20"></div>
+                          
+                <label class="text_16">Do you need to add another address?</label>
+
+                <div class="spacer_10"></div>
+
+                    <fieldset class="inline">
+                        <div>
+                            <label class="block-label">
+                                <input type="radio" value="yes" id="question1_yes" name="1" onclick="document.getElementById('address1').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="block-label">
+                               	<input type="radio" value="no" id="question1_no" name="1" onclick="document.getElementById('address1').style.display = 'none'; toggle();"><span class="text_16">No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+            </div>
+
+			<div id="address1">
 
 			    <div class="spacer_20"></div>
 
-		      	<p class="text_16_bold">Additional address</p>
+	    		<div class="form">
+			        <label class="form_label">Address line 1</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="form">
+			        <label class="form_label">Address line 2</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="form">
+			        <label class="form_label">Address line 3</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="form">
+			        <label class="form_label">County</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="form">
+			        <label class="form_label">Postcode</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="spacer_5"></div>
+
+			    <div>
+                          
+	                <div class="spacer_20"></div>
+	                          
+	                <label class="text_16">Do you need to add another address?</label>
+
+	                <div class="spacer_10"></div>
+
+	                    <fieldset class="inline">
+	                        <div>
+	                            <label class="block-label">
+	                                <input type="radio" value="yes" id="question2_yes" name="2" onclick="document.getElementById('address2').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+	                            </label>
+	                        </div>
+	                        <div>
+	                            <label class="block-label">
+	                               	<input type="radio" value="no" id="question2_no" name="2" onclick="document.getElementById('address2').style.display = 'none'; toggle();"><span class="text_16">No</span>
+	                            </label>
+	                        </div>
+	                    </fieldset>
+
+            	</div>
+
+		    </div>
+
+		    <div id="address2">
 
 		      	<div class="spacer_20"></div>
 
@@ -117,9 +200,30 @@
 
 			    <div class="spacer_5"></div>
 
-		    </div>
+			    <div>
 
-		    <div><a href="#here" onclick="document.getElementById('address1').style.display = 'block';" class="link_16" id="#">Add additional address</a></div>
+				    <div class="spacer_20"></div>
+	                          
+	                <label class="text_16">Do you need to add another address?</label>
+
+	                <div class="spacer_10"></div>
+
+	                    <fieldset class="inline">
+	                        <div>
+	                            <label class="block-label">
+	                                <input type="radio" value="yes" id="question3_yes" name="3" onclick="document.getElementById('address3').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+	                            </label>
+	                        </div>
+	                        <div>
+	                            <label class="block-label">
+	                               	<input type="radio" value="no" id="question3_no" name="3" onclick="document.getElementById('address3').style.display = 'none'; toggle();"><span class="text_16">No</span>
+	                            </label>
+	                        </div>
+	                    </fieldset>
+
+            	</div>
+
+		    </div>
 
 		    <div class="spacer_30"></div>
 
@@ -127,14 +231,14 @@
 	      		<table>
 	      			<tr>
 	      				<td width="50%" class="no-line">
-	      					<a href="bankruptcy_registration_step_4_edited"><input type="submit" value="Save changes" class="form_button_5"></a>
+	      					<a href="bankruptcy_registration_step_4_edited"><input type="submit" value="Continue" id="continue" class="form_button" disabled=true></a>
 	      				</td>
 	      				<td width="50%" class="custom_3">
-					      	<a href="bankruptcy_registration_step_4" class="link_16">Cancel changes</a> 
+					      	<a href="#" class="link_16">Reject application</a> 
 	      				</td>
 	      			</tr>
 	      		</table>
-	      	</div>	    
+	      	</div>
 
 	    </div>
 
@@ -142,8 +246,8 @@
 
 	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
 
-		<div class="column-scan">
-			<img class="img_resize_big_magnified" src="../../../../../public/images/WOB3.jpg" alt="WOB document">
+		<div class="column-scan2">
+			<img class="magnified_scan" src="../../../../../public/images/WOB3.jpg" alt="WOB document">
 		</div>
 
 		<!-- ///////////////////////////////// end of column-scan ///////////////////////////////// -->
@@ -174,9 +278,24 @@
 
 	}
 
+</script>
+
+<script>
+
 	document.getElementById("address1").style.display = 'none';
 	document.getElementById("address2").style.display = 'none';
 	document.getElementById("address3").style.display = 'none';
+
+</script>
+
+<script>
+
+function toggle() {
+    if (document.getElementById('continue').disabled = true)
+    	document.getElementById('continue').disabled = false;
+	else
+		document.getElementById('continue').disabled = true;
+}
 
 </script>
 

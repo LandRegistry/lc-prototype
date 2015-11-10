@@ -67,29 +67,109 @@
 
 		    <div class="spacer_5"></div>
 
-		    <div id="name1">
+		    <div>
+                          
+                <div class="spacer_20"></div>
+                          
+                <label class="text_16">Do you need to add more names?</label>
 
-			    <div class="form">
-			        <label class="form_label">Alternative forename(s)</label>
+                <div class="spacer_10"></div>
+
+                    <fieldset class="inline">
+                        <div>
+                            <label class="block-label">
+                                <input type="radio" value="yes" id="question1_yes" name="1" onclick="document.getElementById('name1').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="block-label">
+                               	<input type="radio" value="no" id="question1_no" name="1" onclick="document.getElementById('name1').style.display = 'none'; toggle();"><span class="text_16">No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+            </div>
+
+			<div id="name1">
+
+			    <div class="spacer_20"></div>
+
+	    		<div class="form">
+			        <label class="form_label">Forename(s)</label>
 			        <input class="form_textfield" type="text">
 			    </div>
 
 			    <div class="form">
-			        <label class="form_label">Alternative surname</label>
+			        <label class="form_label">Surname</label>
 			        <input class="form_textfield" type="text">
 			    </div>
 
 			    <div class="spacer_5"></div>
 
+			    <div>
+                          
+	                <div class="spacer_20"></div>
+	                          
+	                <label class="text_16">Do you need to add more names?</label>
+
+	                <div class="spacer_10"></div>
+
+	                    <fieldset class="inline">
+	                        <div>
+	                            <label class="block-label">
+	                                <input type="radio" value="yes" id="question2_yes" name="2" onclick="document.getElementById('name2').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+	                            </label>
+	                        </div>
+	                        <div>
+	                            <label class="block-label">
+	                               	<input type="radio" value="no" id="question2_no" name="2" onclick="document.getElementById('name2').style.display = 'none'; toggle();"><span class="text_16">No</span>
+	                            </label>
+	                        </div>
+	                    </fieldset>
+
+            	</div>
+
 		    </div>
 
-		    <div><a href="#here" onclick="document.getElementById('name1').style.display = 'inline-block';" class="link_16" id="#">Add alternative name</a></div>
+		    <div id="name2">
 
-		    <div class="spacer_20"></div>
+		      	<div class="spacer_20"></div>
 
-		    <div class="form">
-		        <label class="form_label">Occupation</label>
-		        <input class="form_textfield" type="text">
+	    		<div class="form">
+			        <label class="form_label">Forename(s)</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="form">
+			        <label class="form_label">Surname</label>
+			        <input class="form_textfield" type="text">
+			    </div>
+
+			    <div class="spacer_5"></div>
+
+			    <div>
+
+				    <div class="spacer_20"></div>
+	                          
+	                <label class="text_16">Do you need to add more names?</label>
+
+	                <div class="spacer_10"></div>
+
+	                    <fieldset class="inline">
+	                        <div>
+	                            <label class="block-label">
+	                                <input type="radio" value="yes" id="question3_yes" name="3" onclick="document.getElementById('name3').style.display = 'block'; toggle();"><span class="text_16">Yes</span>
+	                            </label>
+	                        </div>
+	                        <div>
+	                            <label class="block-label">
+	                               	<input type="radio" value="no" id="question3_no" name="3" onclick="document.getElementById('name3').style.display = 'none'; toggle();"><span class="text_16">No</span>
+	                            </label>
+	                        </div>
+	                    </fieldset>
+
+            	</div>
+
 		    </div>
 
 		    <div class="spacer_30"></div>
@@ -98,7 +178,7 @@
 	      		<table>
 	      			<tr>
 	      				<td width="50%" class="no-line">
-	      					<a href="bankruptcy_registration_step_2"><input type="submit" value="Continue" class="form_button"></a>
+	      					<a href="bankruptcy_registration_step_2"><input type="submit" value="Continue" id="continue" class="form_button" disabled=true></a>
 	      				</td>
 	      				<td width="50%" class="custom_3">
 					      	<a href="#" class="link_16">Reject application</a> 
@@ -113,8 +193,8 @@
 
 	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
 
-		<div class="column-scan">
-			<img class="img_resize_big_magnified" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+		<div class="column-scan2">
+			<img class="magnified_scan" src="../../../../../public/images/WOB2.jpg" alt="WOB document">
 		</div>
 
 		<!-- ///////////////////////////////// end of column-scan ///////////////////////////////// -->
@@ -151,7 +231,6 @@
 
 </script>
 
-
 <script>
 
 	function add_additional_name()
@@ -170,9 +249,24 @@
 
 	}
 
+</script>
+
+<script>
+
 	document.getElementById("name1").style.display = 'none';
 	document.getElementById("name2").style.display = 'none';
 	document.getElementById("name3").style.display = 'none';
+
+</script>
+
+<script>
+
+function toggle() {
+    if (document.getElementById('continue').disabled = true)
+    	document.getElementById('continue').disabled = false;
+	else
+		document.getElementById('continue').disabled = true;
+}
 
 </script>
 
