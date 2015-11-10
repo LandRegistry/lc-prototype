@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link rel="stylesheet" href="/public/stylesheets/elements.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+
+	<div class="breadcrumb">
+		<ol>
+		  <li><a class="breadcrumb_links" href="services">Home</a></li>
+		  <li><a class="breadcrumb_links" href="bankruptcies">Bankruptcies</a></li>
+		  <li><a class="breadcrumb_links" href="bankruptcies">List of verification applications</a></li>
+		  <li class="breadcrumb_no_arrow"><span>Writ or Order verification</span></li>
+		</ol>
+	</div>
+
+	<div class="spacer_5"></div>
+
+	<div class="grid-row">
+
+		 <!-- ///////////////////////////////// column two-thirds ///////////////////////////////// -->
+
+	    <div class="column-two-thirds">
+
+	      	<p class="steps">Writ or Order verification</p>
+
+	      	<h1 class="title_36">Confirmation</h1>
+
+	      	<div class="spacer_20"></div>
+
+	      	<div class="confirmation">
+
+	      		<div class="spacer_30"></div>
+
+	      		<div class="spacer_10"></div>
+
+		        <span class="text_confirmation"><img src="/public/images/tick_2.png" style="padding: 0 10px 0 0" alt="">
+
+		         	The backruptcy registration application <br>have been successfully registered
+
+		        </span>
+
+		        <div class="spacer_10"></div>
+
+		        <p class="text_confirmation_2">Reference: 123456</p>
+
+		        <div class="spacer_10"></div>
+
+		    </div>
+
+	      	<div class="spacer_30"></div>
+
+		    <p class="text_16_bold">What is next?</p>
+
+		    <div class="spacer_10"></div>
+
+		    <p class="text_16">We will print and send a confirmation letter to the applicant.</p>
+
+		    <!--
+
+		    <div class="spacer_10"></div>
+
+		    <p><a class="link_16" href="services">Back to home</a></p>
+
+		    <p><a class="link_16" href="bankruptcies">Back to bankruptcies</a></p>
+
+		    <p><a class="link_16" href="services">Back to home</a></p>
+
+		    -->
+
+	      	<table> 
+	      		<th class="no-line">
+					<span></span>
+				</th>  
+				<tr>
+					<td class="no-line"><a class="link_16" href="verifications">Back to verification applications</a></td>
+				</tr>
+				<tr>
+					<td class="no-line"><a class="link_16" href="bankruptcies">Back to bankruptcies</a></td>
+				</tr>
+				<tr>
+					<td class="no-line"><a class="link_16" href="services">Back to home</a></td>
+				</tr>
+			</table>		    
+
+	    </div>
+
+	    <!-- ///////////////////////////////// end of column two-thirds ///////////////////////////////// -->
+
+	    <!-- ///////////////////////////////// column-third ///////////////////////////////// -->
+
+	    <div class="column-third">
+
+	     
+
+	    </div>
+
+	    <!-- ///////////////////////////////// end of column-third ///////////////////////////////// -->
+
+  	</div>
+
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function add_additional_address()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address1").style.display = 'none';
+	  } 
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address2").style.display = 'none';
+	  } 
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address3").style.display = 'none';
+	  }  
+
+	}
+
+	document.getElementById("address1").style.display = 'none';
+	document.getElementById("address2").style.display = 'none';
+	document.getElementById("address3").style.display = 'none';
+
+</script>
+
+</html>
