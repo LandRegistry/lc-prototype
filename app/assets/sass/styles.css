@@ -1111,7 +1111,14 @@ td.custom_3 {
     box-sizing: border-box;
 }
 
-
+.column-scan2 {
+    float: left;
+    width: 60%;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .column-scan-small {
     float: left;
@@ -1144,12 +1151,6 @@ img {
     height: auto;
     border: 1px solid red;
     outline: 1px solid #000000;
-}
-
-.img_resize_big_magnified2 {
-    width:100%; 
-    height: auto;
-    border: 1px solid #000000;
 }
 
 .img_resize_small {
