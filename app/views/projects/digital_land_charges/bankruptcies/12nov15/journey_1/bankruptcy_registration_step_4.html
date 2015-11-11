@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="/public/stylesheets/elements.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 
+
+
 </head>
 
 <body>
@@ -65,11 +67,11 @@
 				</tr>
 				<tr>
 					<td width="50%"><span class="text_review_table_bold">Forename(s)</span></td>
-					<td width="50%"><input class="form_textfield_review" type="text"></td>
+					<td width="50%"><input class="form_textfield_review" type="text" id="one" oninput="change()"></td>
 				</tr>
 				<tr>
 					<td colspan="1"><span class="text_review_table_bold">Surname</span></td>
-					<td colspan="2"><input class="form_textfield_review" type="text"></td>
+					<td colspan="2"><input class="form_textfield_review" type="text" id="two" oninput="change()"></td>
 				</tr>
 				<tr>
 					<td colspan="1"><span class="text_review_table_bold">Occupation</span></td>
@@ -138,7 +140,7 @@
 
 		    <table class="review_table">   
 				<tr>
-					<td width="10%" class="no-line"><input type="checkbox" id="cb" onclick="toggle()"></td>
+					<td width="10%" class="no-line"><input type="checkbox" id="cb" onclick="change()"></td>
 					<td width="90%" class="no-line"><span class="text_review_table">I confirm I reviewed all above details</span></td>
 				</tr>
 			</table>
@@ -150,7 +152,7 @@
 	      			<tr>
 	      				<td width="50%" class="no-line">
 	      					<a href="bankruptcy_registration_confirmation">
-	      						<input type="submit" value="Register" class="form_button" id="btn" disabled></a>
+	      						<input type="submit" value="Register" class="form_button" id="btn" disabled=""></a>
 	      				</td>
 	      				<td width="50%" class="custom_3">
 					      	<a href="#" class="link_16">Reject application</a> 
@@ -165,8 +167,8 @@
 
 	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
 
-		<div class="column-scan2">
-			<img class="magnified_scan" src="../../../../../public/images/WOB5.jpg" alt="WOB document">
+		<div class="column-scan2 content-fixed">
+			<img class="magnified_scan form-width"  src="../../../../../public/images/WOB5.jpg" alt="WOB document">
 		</div>
 
 		<!-- ///////////////////////////////// end of column-scan ///////////////////////////////// -->
@@ -186,6 +188,20 @@ function toggle() {
     document.getElementById('btn').disabled = !cbChecked;
 }
  
+</script>
+
+<script type="text/javascript">
+
+function change() {
+    var cbChecked = document.getElementById('cb').checked;
+    var oneText = document.getElementById('one').value !== "";
+    var twoText = document.getElementById('two').value !== "";
+    var enable = cbChecked && oneText && twoText;
+    
+    
+    document.getElementById('btn').disabled = !enable;
+}
+
 </script>
 
 </html>
