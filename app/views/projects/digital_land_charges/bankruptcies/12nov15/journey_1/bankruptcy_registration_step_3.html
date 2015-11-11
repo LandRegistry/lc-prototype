@@ -110,8 +110,8 @@
 
 	    <!-- ///////////////////////////////// column-scan ///////////////////////////////// -->
 
-		<div class="column-scan2">
-			<img class="magnified_scan" src="../../../../../public/images/WOB4.jpg" alt="WOB document">
+		<div id="form_page" class="column-scan2 form-width">
+			<img class="magnified_scan form-width" src="../../../../../public/images/WOB4.jpg" alt="WOB document">
 		</div>
 
 		<!-- ///////////////////////////////// end of column-scan ///////////////////////////////// -->
@@ -146,6 +146,18 @@
 	document.getElementById("address2").style.display = 'none';
 	document.getElementById("address3").style.display = 'none';
 
+</script>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        if (document.body.scrollTop > 230) {
+            document.getElementById("form_page").className = "column-scan2 form-width content-fixed";
+        } else {
+            document.getElementById("form_page").className = "column-scan2 form-width";
+
+        }
+    }
 </script>
 
 </html>
