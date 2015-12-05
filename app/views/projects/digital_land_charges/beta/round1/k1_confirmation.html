@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link rel="stylesheet" href="/public/stylesheets/elements.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="breadcrumb">
+        <ol>
+            <li><a class="breadcrumb_links" href="home">Home</a></li>
+            <li><a class="breadcrumb_links" href="land_charge">Land charges</a></li>
+            <li><a class="breadcrumb_links" href="lc_reg_list">List of registration applications</a></li>
+            <li class="breadcrumb_no_arrow">Land charge registration</li>
+        </ol>
+    </div>
+
+    <div class="spacer_5"></div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <p class="steps">Land charge registration</p>
+
+            <h1 class="title_36">Confirmation</h1>
+
+            <div class="spacer_20"></div>
+
+            <div class="confirmation">
+                <div class="spacer_30"></div>
+                <div class="spacer_10"></div>
+
+		        <span class="text_confirmation"><img src="/public/images/tick_2.png" style="padding: 0 10px 0 0" alt="">
+		         	The land charge registration has been successfully submitted
+		        </span>
+
+                <div class="spacer_10"></div>
+                <p class="text_confirmation_2">Reference: 736451289</p>
+            </div>
+
+            <div class="spacer_30"></div>
+
+            <p><a class="link_16" href="lc_reg_list">List of registration applications</a></p>
+
+            <p><a class="link_16" href="land_charge">Land charges</a></p>
+
+            <p><a class="link_16" href="home">Home</a></p>
+
+        </div>
+
+        <!-- ///////////////////////////////// end of column two-thirds ///////////////////////////////// -->
+
+        <!-- ///////////////////////////////// column-third ///////////////////////////////// -->
+
+        <div class="column-third">
+
+
+
+        </div>
+
+        <!-- ///////////////////////////////// end of column-third ///////////////////////////////// -->
+
+    </div>
+
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function add_additional_address()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address1").style.display = 'none';
+	  } 
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address2").style.display = 'none';
+	  } 
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("address3").style.display = 'none';
+	  }  
+
+	}
+
+	document.getElementById("address1").style.display = 'none';
+	document.getElementById("address2").style.display = 'none';
+	document.getElementById("address3").style.display = 'none';
+
+</script>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link rel="stylesheet" href="/public/stylesheets/elements.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type=”text/javascript” src=”https://cdn.rawgit.com/tjharrop/form-data-logging/master/scripts/form.storage.js”></script>
+
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <h1 class="title_36">Land charge registration</h1>
+
+    <div class="spacer_5"></div>
+
+    <div class="text_16_gray">
+        <span class="text_16_bold">1. Class of charge</span>
+        &nbsp;&nbsp;
+        2. Estate owner details
+        &nbsp;&nbsp;
+        3. Estate owner address
+        &nbsp;&nbsp;
+        4. Check registration
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <p class="text_24_bold">1. Class of charge</p>
+
+            <div class="spacer_20"></div>
+
+            <form>
+                <div class="form">
+                    <label class="form_label">Class</label>
+                    <input class="form_textfield" type="text" name="class" autofocus>
+                </div>
+
+                <div class="form">
+                    <label class="form_label">Sub class</label>
+                    <input class="form_textfield" type="text" name="subclass">
+                </div>
+            </form>
+
+                <div class="spacer_30"></div>
+
+                <div>
+                    <table>
+                        <tr>
+                            <td width="50%" class="no-line">
+                                <a href="k1_step2"><input type="submit" value="Continue" class="form_button"></a>
+                            </td>
+                            <td width="50%" class="custom_3">
+                                <a href="uc" class="link_16">Reject application</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <a href="uc" class="link_16">Return to this application later</a>
+                </div>
+
+        </div>
+
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan-small">
+                    <div class="spacer_30"></div>
+
+                    <div class="spacer_5"></div>
+
+                    <img class="img_resize_small_selected" src="../../../../../public/images/K1.jpg" alt="K1 document">
+                </div>
+
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in">Zoom in</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/K1.jpg" alt="WOB document">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan-small">
+
+                    <div class="spacer_30"></div>
+
+                    <div class="spacer_5"></div>
+
+                    <div style="position:relative">
+                        <img class="img_resize_small_selected" src="../../../../../public/images/K1.jpg" alt="K1 document">
+                    </div>
+                </div>
+
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut">Zoom out</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/K1zoom.jpg" alt="K1 document">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+
+<script>
+
+	function page()
+	{
+	  if (document.getElementById("page1").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'none';
+	    document.getElementById("page_b").style.display = 'block';
+	    
+	  }
+	  else if (document.getElementById("page2").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'block';
+	    document.getElementById("page_b").style.display = 'none';
+	    
+	  }
+	}
+
+	document.getElementById("page_a").style.display = 'none';
+	document.getElementById("page_b").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+
+<!--<fieldset class="inline">
+                        <legend class="visuallyhidden">Class of charge</legend>
+
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="A" onclick="showSubClass();">
+                            A
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="B" onclick="showSubClass();">
+                            B
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="C" onclick="showSubClass();">
+                            C
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="D" onclick="showSubClass();">
+                            D
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="E" onclick="showSubClass();">
+                            E
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="F" onclick="showSubClass();">
+                            F
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="PA" onclick="showSubClass();">
+                            PA
+                        </label>
+                        <label class="block-label" for="radio">
+                            <input id="radio" type="radio" name="charge-class" value="WO" onclick="showSubClass();">
+                            WO
+                        </label>
+                    </fieldset>
+
+               <div class="form" id="sub-class-c">
+                    <label class="form_label">Sub class</label>
+
+                    <fieldset class="inline">
+                        <legend class="visuallyhidden">Sub class C</legend>
+
+                        <label class="block-label" for="radio-c">
+                            <input id="radio-c" type="radio" name="sub-class-c" value="C1">
+                            C1
+                        </label>
+                        <label class="block-label" for="radio-c">
+                            <input id="radio-c" type="radio" name="sub-class-c" value="C2">
+                            C2
+                        </label>
+                        <label class="block-label" for="radio-c">
+                            <input id="radio-c" type="radio" name="sub-class-c" value="C3">
+                            C3
+                        </label>
+                        <label class="block-label" for="radio-c">
+                            <input id="radio-c" type="radio" name="sub-class-c" value="C4">
+                            C4
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="form" id="sub-class-d">
+                    <label class="form_label">Sub class</label>
+
+                    <fieldset class="inline">
+                        <legend class="visuallyhidden">Sub class D</legend>
+
+                        <label class="block-label" for="radio-13">
+                            <input id="radio-13" type="radio" name="sub-class-d" value="D1">
+                            D1
+                        </label>
+                        <label class="block-label" for="radio-14">
+                            <input id="radio-14" type="radio" name="sub-class-d" value="D2">
+                            D2
+                        </label>
+                        <label class="block-label" for="radio-15">
+                            <input id="radio-15" type="radio" name="sub-class-d" value="D3">
+                            D3
+                        </label>
+                    </fieldset>
+                </div>
+
+<script>
+	document.getElementById("sub-class-c").style.display = 'none';
+	document.getElementById("sub-class-d").style.display = 'none';
+</script>
+
+<script>
+    function showSubClass() {
+        if (document.getElementById(radio).value == "C"){
+            document.getElementById("sub-class-c").style.display = 'block';
+        }
+        var class = document.getElementById(radio).value;
+        switch(class) {
+            case "A":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "B":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "C":
+                if (document.getElementById("sub-class-c").style.display == 'none') {
+                    document.getElementById("sub-class-c").style.display = 'block';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "D":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display == 'none') {
+                    document.getElementById("sub-class-d").style.display = 'block';
+                }
+            case "E":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "F":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "PA":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+            case "WO":
+                if (document.getElementById("sub-class-c").style.display != 'none') {
+                    document.getElementById("sub-class-c").style.display = 'none';
+                }
+                if (document.getElementById("sub-class-d").style.display != 'none') {
+                    document.getElementById("sub-class-d").style.display = 'none';
+                }
+        }
+    }
+
+</script>                    -->
+</html>
+
