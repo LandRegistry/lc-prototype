@@ -38,7 +38,7 @@
 
             <div class="form">
                 <label class="form_label">Class and subclass</label>
-                <input class="form_textfield" type="text" name="class" autofocus>
+                <input class="form_textfield" type="text" name="class" value="C1">
             </div>
 
             <div class="spacer_30"></div>
@@ -51,7 +51,7 @@
 
             <div class="form">
                 <label class="form_label">County or unitary authority area</label>
-                <input class="form_textfield" type="text">
+                <input class="form_textfield" type="text" value="Devon">
             </div>
 
             <div id="county1">
@@ -68,12 +68,12 @@
 
             <div class="form">
                 <label class="form_label">District</label>
-                <input class="form_textfield" type="text">
+                <input class="form_textfield" type="text" value="Vicarage">
             </div>
 
             <div class="form">
                 <label class="form_label">Short description</label>
-                <textarea class="form_textmemo"></textarea>
+                <textarea class="form_textmemo">14 Canterbury Road vicarage EX12 9LZ</textarea>
             </div>
 
             <div class="spacer_30"></div>
@@ -88,7 +88,7 @@
                 <p class="text_indent">Please select the type of estate owner from the list</p>
                 <select id="estateOwnerTypes" class="drop-down">
                     <option value="empty">--</option>
-                    <option value="privateIndividual">Private individual</option>
+                    <option value="privateIndividual" selected="selected">Private individual</option>
                     <option value="limitedCompany">Limited company</option>
                     <option value="localAuthority">Local authority</option>
                     <option value="complexName">Complex name</option>
@@ -99,12 +99,12 @@
             <div id="private">
                 <div class="form">
                     <label class="form_label">Forename(s)</label>
-                    <input class="form_textfield" type="text">
+                    <input class="form_textfield" type="text" value="Luca">
                 </div>
 
                 <div class="form">
                     <label class="form_label">Surname</label>
-                    <input class="form_textfield" type="text">
+                    <input class="form_textfield" type="text" value="Palmer">
                 </div>
             </div>
 
@@ -157,7 +157,7 @@
             <div class="spacer_10"></div>
 
             <div class="form">
-
+                <label class="form_label">Any additional information</label>
                 <textarea class="form_textmemo" rows="4"></textarea>
             </div>
 
@@ -169,9 +169,9 @@
                         <td width="50%" class="no-line">
                             <a href="k1_step2"><input type="submit" value="Continue" class="form_button"></a>
                         </td>
-                      <!--  <td width="50%" class="custom_3">
-                            <a href="uc" class="link_16">Reject application</a>
-                        </td>-->
+                        <!--  <td width="50%" class="custom_3">
+                              <a href="uc" class="link_16">Reject application</a>
+                          </td>-->
                     </tr>
                 </table>
 
@@ -292,7 +292,7 @@
         }
     }
 
-    document.getElementById("private").style.display = 'none';
+    document.getElementById("private").style.display = 'block';
     document.getElementById("limited").style.display = 'none';
     document.getElementById("local").style.display = 'none';
     document.getElementById("complex").style.display = 'none';

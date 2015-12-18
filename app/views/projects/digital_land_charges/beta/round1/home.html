@@ -5,11 +5,8 @@
 <title>Digital Land Charges</title>
 
 <head>
-
     <link rel="stylesheet" href="/public/stylesheets/styles.css">
-    <link rel="stylesheet" href="/public/stylesheets/elements.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
@@ -18,50 +15,53 @@
 
 <div id="content">
 
-    <div class="breadcrumb">
+    <div id="breadcrumb">
         <ol>
-            <li class="breadcrumb_no_arrow"><span>Home</span></li>
+            <li><span>Home</span></li>
         </ol>
     </div>
 
     <div class="spacer_5"></div>
 
     <div class="grid-row">
+        <div class="alert alert-danger">
+            There are some
+            <a href="uc" class="alert-link">unidentified applications</a>
+        </div>
+    </div>
+
+    <div class="grid-row">
         <div class="column-quarter">
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Bankruptcy Applications</a>
+                <a class="text_19_bold no_link_style" href="bankruptcy">Bankruptcy Applications</a>
 
                 <div class="spacer_10"></div>
 
-                <a href="uc"><img src="../../../../../public/images/pig.png" alt="Bankruptcies"></a>
+                <a href="bankruptcy"><img src="../../../../../public/images/pig.png" alt="Bankruptcies"></a>
 
                 <div class="spacer_10"></div>
 
                 <ul>
                     <li>
-                        <a class="link_14" href="uc">Registrations (11)</a>
+                        <a class="link_14" href="b_reg_list">Registrations (10)</a>
                     </li>
                     <div class="spacer_5"></div>
                     <li>
-                        <a class="link_14" href="uc">Amendments (9)</a>
+                        <a class="link_14" href="b_am_list">Amendments (9)</a>
                     </li>
                     <div class="spacer_5"></div>
                     <li>
-                        <a class="link_14" href="uc">Rectifications (2)</a>
+                        <a class="link_14" href="b_rc_list">Rectifications (2)</a>
                     </li>
                     <div class="spacer_5"></div>
                     <li>
-                        <a class="link_14" href="uc">Renewals (0)</a>
+                        <a class="link_14" href="b_wa_list">Withheld Address (3)</a>
                     </li>
                     <div class="spacer_5"></div>
                     <li>
-                        <a class="link_14" href="uc">Withheld Address (3)</a>
-                    </li>
-                    <div class="spacer_5"></div>
-                    <li>
-                        <a class="link_14" href="uc">Stored applications (0)</a>
+                        <a class="link_14" href="b_stored_list">Stored applications (0)</a>
                     </li>
                 </ul>
             </div>
@@ -71,7 +71,7 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="land_charge">Land Charge Applications</a>
+                <a class="text_19_bold no_link_style" href="land_charge">Land Charge Applications</a>
 
                 <div class="spacer_10"></div>
 
@@ -93,6 +93,10 @@
                     </li>
                     <div class="spacer_5"></div>
                     <li>
+                        <a class="link_14" href="b_rn_list">Renewals (0)</a>
+                    </li>
+                    <div class="spacer_5"></div>
+                    <li>
                         <a class="link_14" href="lc_stored_list">Stored applications (4)</a>
                     </li>
                 </ul>
@@ -103,9 +107,9 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Searches</a>
+                <a class="text_19_bold no_link_style" href="uc">Searches</a>
 
-                <div class="spacer_30"></div>
+                <div class="spacer_10"></div>
 
                 <a href="uc"><img src="../../../../../public/images/search.png" alt="Searches"></a>
 
@@ -115,7 +119,7 @@
                     <li>
                         <a class="link_14" href="uc">Full Search (6)</a>
                     </li>
-                    <div class="space_5"></div>
+                    <div class="spacer_5"></div>
                     <li>
                         <a class="link_14" href="uc">Bankruptcy Search (0)</a>
                     </li>
@@ -127,9 +131,9 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Cancellations</a>
+                <a class="text_19_bold no_link_style" href="uc">Cancellations</a>
 
-                <div class="spacer_30"></div>
+                <div class="spacer_10"></div>
 
                 <a href="uc"><img src="../../../../../public/images/cancel.png" alt="Cancellations"></a>
 
@@ -139,7 +143,7 @@
                     <li>
                         <a class="link_14" href="uc">Cancellations (6)</a>
                     </li>
-                    <div class="space_5"></div>
+                    <div class="spacer_5"></div>
                     <li>
                         <a class="link_14" href="uc">Part Cancellations (0)</a>
                     </li>
@@ -159,11 +163,19 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Office Copies</a>
+                <a class="text_19_bold no_link_style" href="uc">Office Copies</a>
 
-                <div class="spacer_30"></div>
+                <div class="spacer_10"></div>
 
                 <a href="uc"><img src="../../../../../public/images/copy1.png" alt="Office Copies"></a>
+
+                <div class="spacer_10"></div>
+
+                <ul>
+                    <li>
+                        <a class="link_14" href="uc">Office copies</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -171,11 +183,14 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Enquiries</a>
+                <a class="text_19_bold no_link_style" href="uc">Enquiries</a>
 
-                <div class="spacer_30"></div>
+                <div class="spacer_10"></div>
 
                 <a href="#"><img src="../../../../../public/images/enquiries.png" alt="Enquiries"></a>
+
+                <div class="spacer_10"></div>
+
                 <ul>
                     <li>
                         <a class="link_14" href="lc_reg_list">Enquiries</a>
@@ -186,7 +201,7 @@
                     </li>
                     <div class="spacer_5"></div>
                     <li>
-                        <a class="link_14" href="uc">Unidentified Applications</a>
+                        <a class="link_14" href="uc">Unidentified Applications (4)</a>
                     </li>
                 </ul>
             </div>
@@ -196,16 +211,15 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">Image <br> Management</a>
+                <a class="text_19_bold no_link_style" href="uc">Image Management</a>
 
                 <div class="spacer_10"></div>
 
                 <a href="uc"><img src="../../../../../public/images/image_man.png" alt="Image Management"></a>
+
+                <div class="spacer_10"></div>
+
                 <ul>
-                    <li>
-                        <a class="link_14" href="lc_reg_list">Corrections</a>
-                    </li>
-                    <div class="spacer_5"></div>
                     <li>
                         <a class="link_14" href="uc">Deletions</a>
                     </li>
@@ -221,11 +235,13 @@
             <div class="service_box">
                 <div class="spacer_20"></div>
 
-                <a class="text_19_bold" href="uc">General <br> Information</a>
+                <a class="text_19_bold no_link_style" href="uc">General Information</a>
 
                 <div class="spacer_10"></div>
 
                 <a href="uc"><img src="../../../../../public/images/info.png" alt="General Information"></a>
+
+                <div class="spacer_10"></div>
 
                 <ul>
                     <li>

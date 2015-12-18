@@ -5,11 +5,8 @@
 <title>Digital Land Charges</title>
 
 <head>
-
     <link rel="stylesheet" href="/public/stylesheets/styles.css">
-    <link rel="stylesheet" href="/public/stylesheets/elements.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
@@ -17,44 +14,97 @@
 {{>includes/header}}
 
 <div id="content">
+    <div class="spacer_10"></div>
     <h1 class="title_36">Land charge registration</h1>
 
-    <div class="spacer_5"></div>
+    <div class="spacer_10"></div>
 
     <div class="text_16_gray">
-        <a href="K1_step1" class="link_16 no_link_style">1. Class of charge</a>
+        <a href="k1_step1" class="link_16 no_link_style">1. Input details</a>
         &nbsp;&nbsp;
-        <span class="text_16_bold">2. Estate owner details</span>
+        <span class="text_16_bold">2. Check details</span>
         &nbsp;&nbsp;
-        3. Estate owner address
-        &nbsp;&nbsp;
-        4. Check registration
+        3. Conveyancer and fees
     </div>
 
     <div class="spacer_30"></div>
 
     <div class="grid-row">
         <div class="column-form">
-            <p class="text_24_bold">2. Estate owner details</p>
+            <!-- CHARGE -->
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Class of charge</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="k1_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Class</span></td>
+                    <td width="50%"><span class="text_review_table">C1</span></td>
+                </tr>
+            </table>
 
             <div class="spacer_20"></div>
 
-            <div class="form">
-                <label class="form_label">Forename(s)</label>
-                <input class="form_textfield" type="text" autofocus>
-            </div>
-
-            <div class="form">
-                <label class="form_label">Surname</label>
-                <input class="form_textfield" type="text">
-            </div>
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Particulars of land affected</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="k1_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">County or unitary authority area</span></td>
+                    <td width="50%"><span class="text_review_table">Devon</span></td>
+                </tr>
+                <tr>
+                    <td width="1"><span class="text_review_table_bold">District</span></td>
+                    <td width="2"><span class="text_review_table">Vicarage</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1" valign="top"><span class="text_review_table_bold">Short description</span></td>
+                    <td colspan="2"><span class="text_review_table">14 Canterbury Road Vicarage EX12 9LZ</span></td>
+                </tr>
+            </table>
 
             <div class="spacer_20"></div>
 
-            <div class="form">
-                <label class="form_label">Occupation</label>
-                <input class="form_textfield" type="text">
-            </div>
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Estate owner details</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="k1_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Forename</span></td>
+                    <td width="50%"><input class="form_textfield_review" type="text" id="forename" onkeyup="checkData()" autofocus></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+                    <td colspan="2"><input class="form_textfield_review" type="text" id="surname" onkeyup="checkData()"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" valign="top"><span class="text_review_table_bold">Title, trade or profession</span></td>
+                    <td colspan="2"><span class="text_review_table"></span></td>
+                </tr>
+            </table>
+
+            <div class="spacer_20"></div>
+
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Additional information</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="k1_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Information</span></td>
+                    <td colspan="2"><span class="text_review_table"></span></td>
+                </tr>
+            </table>
 
             <div class="spacer_30"></div>
 
@@ -62,15 +112,12 @@
                 <table>
                     <tr>
                         <td width="50%" class="no-line">
-                            <a href="k1_step3"><input type="submit" value="Continue" class="form_button"></a>
-                        </td>
-                        <td width="50%" class="custom_3">
-                            <a href="uc" class="link_16">Reject application</a>
+                            <a href="k1_step3">
+                                <input type="submit" value="Continue" class="form_button" id="btn" disabled></a>
                         </td>
                     </tr>
                 </table>
-
-                <a href="uc" class="link_16">Return to this application later</a>
+                </table>
             </div>
         </div>
 
@@ -145,6 +192,21 @@
 
 </body>
 
+<script>
+
+    function checkData() {
+
+        var checked = ((document.getElementById("forename").value != "") && (document.getElementById("surname").value != ""));
+
+        if (checked) {
+            document.getElementById('btn').disabled = false;
+        }
+        else {
+            document.getElementById('btn').disabled = true;
+        }
+    }
+
+</script>
 <script>
 
 	function page()
