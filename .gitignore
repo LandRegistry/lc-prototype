@@ -4,3 +4,6 @@
 public
 govuk_modules
 node_modules/*
+
+# IntelliJ
+.idea
