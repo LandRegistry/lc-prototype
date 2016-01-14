@@ -31,6 +31,7 @@
 
     <div class="grid-row">
         <div class="column-form">
+            <div id="data">
             <table class="review_table">
                 <tr>
                     <th colspan="2" class="table_text_black"><span class="text_19_gray">Estate owner details</span></th>
@@ -51,6 +52,7 @@
                     <td colspan="2"><span class="text_review_table"></span></td>
                 </tr>
             </table>
+            </div>
 
             <div class="spacer_20"></div>
 
@@ -113,7 +115,7 @@
                     <tr>
                         <td width="50%" class="no-line">
                             <a href="k1_step3">
-                                <input type="submit" value="Continue" class="form_button" id="btn" disabled></a>
+                                <input type="submit" value="Continue" class="form_button" id="btn" disabled onclick="validate()"></a>
                         </td>
                     </tr>
                 </table>
@@ -192,6 +194,24 @@
 
 </body>
 
+<script>
+
+    function validate() {
+
+        var forename = document.getElementById("forename").value;
+        var surname = document.getElementById("surname").value;
+        var charge = document.getElementById("charge").value;
+
+        var forenameOK = ((forename == "Luca") || (forename == "luca") || (forename == "LUCA"));
+        var surnameOK = ((surname == "Palmer") || (surname == "palmer") || (surname == "PALMER"));
+        var chargeOK = ((charge == "C1") || (charge == "c1") || (charge == "C(i)") || (charge == "c(i)") || (charge == "C(I)") || (charge == "c(I)"));
+
+        if (forename OK && surnameOK && chargeOK) {
+            document.getElementByID("data").innerHTML = "
+        }
+    }
+
+</script>
 <script>
 
     function checkData() {
