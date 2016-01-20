@@ -441,6 +441,19 @@ table.custom_1 {
   border-top: 1px solid #363839;
   padding-top: 20px; }
 
+#listTable {
+  font-size: 16px;
+  border-bottom: 1px solid #363839;
+  border-top: 1px solid #363839;
+  padding-top: 20px; }
+
+#listTable tr:hover {
+    background-color: #e9f7d4;
+    color: white;
+    cursor: pointer;
+    cursor: hand;
+  }
+
 .tr_review {
   font-size: 16px;
   border-bottom: 1px solid #363839;
@@ -499,6 +512,28 @@ td.custom_3 {
 .alert-link {
   color: #843534;
   font-weight: 700; }
+
+.alert-success {
+  font-family: Roboto;
+  font-weight: 700;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.form-group-error {
+  border-left: 5px solid #b10e1e;
+  padding-left: 15px;
+}
+
+.error-message {
+  font-family: Roboto;
+  color: #b10e1e;
+  font-weight: bold;
+}
 
 .service_box {
   width: 280px;
