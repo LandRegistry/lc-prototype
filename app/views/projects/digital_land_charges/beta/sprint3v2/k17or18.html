@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">K18 reprint</h1>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <p class="text_24_bold">Which result would you like?</p>
+            <div class="spacer_20"></div>
+            <div class="form">
+                <table id="listTable">
+                    <tr>
+                        <td onclick="showForm()">Sarah Ryan</td>
+                    </tr>
+                    <tr>
+                        <td onclick="showForm()">Hannah Sullivan</td>
+                    </tr>
+                    <tr>
+                        <td onclick="showForm()">Zachary Harding</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="spacer_20"></div>
+
+            <table>
+                <tr>
+                    <td width="10%" class="no-line" id="button">
+                        <a href="reprint"><input type="submit" value="Print" class="form_button"></a>
+                    </td>
+                    <td class="custom_3">
+                          <a href="reprint" class="link_16">Search for another</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="form" class="column-scan">
+            <img src="../../../../../public/images/k18.jpg" alt="k18 search result">
+        </div>
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    function showForm() {
+        document.getElementById("form").style.display = 'block';
+        document.getElementById("button").style.display = 'block';
+    }
+
+    document.getElementById("form").style.display = 'none';
+    document.getElementById("button").style.display = 'none';
+
+</script>
+
+</html>
+
