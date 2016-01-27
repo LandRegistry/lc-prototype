@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div id="breadcrumb">
+        <ol>
+            <li><a class="links" href="home">Home</a></li>
+            <li><span>Reprint</span></li>
+        </ol>
+    </div>
+
+    <div class="spacer_5"></div>
+
+    <div class="column-quarter" style="height: 100%">
+        <ul id="side-nav">
+            <li><a href="home">Home</a></li>
+            <li><a href="bankruptcy">Bankruptcy Applications</a></li>
+            <li><a href="land_charge">Land Charge Applications</a></li>
+            <li><a href="search">Searches</a></li>
+            <li><a href="cancellation">Cancellations</a></li>
+            <li><a href="uc">Office Copies</a></li>
+            <li><a class="active" href="uc">Enquiries</a></li>
+            <li><a href="int_func">Internal Functions</a></li>
+            <li><a href="uc">General Information</a></li>
+        </ul>
+    </div>
+
+    <div class="column-two-thirds">
+        <h1 class="title_36">Enquiries</h1>
+        <div class="spacer_10"></div>
+
+        <div class="column-quarter">
+            <div id="subservice_box_3">
+                <a class="no_link_style" href="uc">
+                    <div class="spacer_15"></div>
+
+                    <p class="text_16_bold">Enquiries</p>
+
+                    <div class="spacer_15"></div>
+
+                    <!--<div class="indicator"><p class="indicator_middle"></p></div>-->
+                </a>
+            </div>
+        </div>
+
+        <div class="column-quarter">
+            <div id="subservice_box_3">
+                <a class="no_link_style" href="uc">
+                    <div class="spacer_15"></div>
+
+                    <p class="text_16_bold">Historical view</p>
+
+                    <div class="spacer_15"></div>
+
+                    <!--<div class="indicator"><p class="indicator_middle"></p></div>-->
+                </a>
+            </div>
+        </div>
+
+        <div class="column-quarter">
+            <div id="subservice_box_3">
+                <a class="no_link_style" href="uc">
+                    <div class="spacer_15"></div>
+
+                    <p class="text_16_bold">Unidentified</p>
+
+                    <div class="spacer_15"></div>
+
+                    <div class="indicator"><p class="indicator_middle">4</p></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="column-quarter">
+            <div class="active_subservice_box_3">
+                <a class="no_link_style" href="reprint">
+                    <div class="spacer_15"></div>
+
+                    <p class="text_16_bold">Reprint</p>
+
+                    <div class="spacer_15"></div>
+
+                    <!--<div class="indicator"><p class="indicator_middle"></p></div> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="spacer_30"></div>
+    </div>
+
+    <div class="column-two-thirds">
+        <div class="column-half">
+            <h2 class="title_24">K22 reprint</h2>
+            <div class="form">
+                <label class="form_label">Registration number</label><br>
+                <input class="form_textfield" type="text" style="width: 200px">
+            </div>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <a href="k22"><input type="submit" value="Search" class="form_button"></a>
+            </div>
+
+            <div class="spacer_30"></div>
+        </div>
+
+        <div class="column-half">
+            <h2 class="title_24">K17/K18 reprint</h2>
+            <div class="form">
+                <label class="form_label">Key number</label><br>
+                <input class="form_textfield" type="text" style="width: 200px">
+            </div>
+            <div class="form">
+                <label class="form_label">Date from</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="form_label">Date to</label><br>
+                <input class="form_textfield" type="date" style="width: 150px">&nbsp;&nbsp;
+                <input class="form_textfield" type="date" style="width: 150px">
+            </div>
+            <div class="form">
+                <label class="form_label">Name searched</label><br>
+                <input class="form_textfield" type="text" style="width: 400px">
+            </div>
+            <div class="spacer_10"></div>
+            <div class="form">
+                <a href="k17or18"><input type="submit" value="Search" class="form_button"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+</html>
