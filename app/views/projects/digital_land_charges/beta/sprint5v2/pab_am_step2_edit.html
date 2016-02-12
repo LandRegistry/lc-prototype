@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Bankruptcy amendment</h1>
+
+	<div class="spacer_10"></div>
+
+	<div class="text_16_gray">
+		<a href="pab_am_step1" class="link_16 no_link_style">1. Retrieve original</a>
+		&nbsp;&nbsp;
+		<span class="text_16_bold">2. View original details</span>
+		&nbsp;&nbsp;
+		3. Amend details
+		&nbsp;&nbsp;
+		4. Key number
+	</div>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+	    <div class="column-form">
+			<p class="text_24_bold">Original bankruptcy details</p>
+
+			<p class="text_indent">Please amend information by over-keying as necessary</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<label class="form_label">Forename(s)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="link_16_right" href="#">Remove name</a>
+				<input class="form_textfield" type="text" value="Charlie">
+			</div>
+
+			<div class="form">
+				<label class="form_label">Surname</label>
+				<input class="form_textfield" type="text" value="Richardson">
+			</div>
+
+			<div id="name1">
+				<div class="form">
+					<label class="form_label">Forename(s)</label>
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">Surname</label>
+					<input class="form_textfield" type="text">
+				</div>
+			</div>
+
+			<div><a href="#here" onclick="document.getElementById('name1').style.display = 'block';" class="link_16" id="#">Add AKA</a></div>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<label class="form_label">Occupation</label>
+				<input class="form_textfield" type="text" value="">
+			</div>
+
+			<div class="spacer_10"></div>
+			<p class="text_18_bold">Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="link_16_right" href="lrrabo_step2_no_add2">Remove address</a>
+			</p>
+			<div class="spacer_5"></div>
+
+			<div class="form">
+				<input class="form_textfield" type="text" value="67 Southern Way">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text" value="North Radworthy">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text" value="">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text">
+			</div>
+
+			<div class="form">
+				<label class="form_label">County</label>
+				<input class="form_textfield" type="text" value="Devon">
+			</div>
+
+			<div class="form">
+				<label class="form_label">Postcode</label><br>
+				<input class="form_textfield" type="text" style="width: 150px" value="EX36 6HJ">
+			</div>
+
+			<div class="spacer_10"></div>
+			<p class="text_18_bold">Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="link_16_right" href="lrrabo_step2_no_add2">Remove address</a>
+			</p>
+			<div class="spacer_5"></div>
+
+			<div class="form">
+				<input class="form_textfield" type="text" value="14 Heasley Lane">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text" value="North Radworthy">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text" value="">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text">
+			</div>
+			<div class="form">
+				<input class="form_textfield" type="text">
+			</div>
+
+			<div class="form">
+				<label class="form_label">County</label>
+				<input class="form_textfield" type="text" value="Devon">
+			</div>
+
+			<div class="form">
+				<label class="form_label">Postcode</label><br>
+				<input class="form_textfield" type="text" style="width: 150px" value="EX36 3LE">
+			</div>
+
+			<div id="address1">
+				<div class="spacer_10"></div>
+				<p class="text_18_bold">Address</p>
+				<div class="spacer_5"></div>
+
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">County</label>
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">Postcode</label><br>
+					<input class="form_textfield" type="text" style="width: 150px">
+				</div>
+			</div>
+
+			<div id="address2">
+				<div class="spacer_10"></div>
+				<p class="text_18_bold">Address</p>
+				<div class="spacer_5"></div>
+
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+				<div class="form">
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">County</label>
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">Postcode</label><br>
+					<input class="form_textfield" type="text" style="width: 150px">
+				</div>
+			</div>
+
+			<div><a href="#here" onclick="addAdditionalAddress()" class="link_16" id="#">Add additional address</a></div>
+
+			<div class="spacer_30"></div>
+
+
+
+			<p class="text_24_bold">Particulars of court</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<label class="form_label">Name</label>
+				<input class="form_textfield" type="text" value="Barstaple County Court">
+			</div>
+
+			<div class="form">
+				<label class="form_label">Court reference no.</label>
+				<input class="form_textfield" type="text" value="412 of 2015">
+			</div>
+
+			<div class="form">
+				<label class="form_label">Case year</label><br>
+				<input class="form_textfield" type="text" style="width: 100px" value="2015">
+			</div>
+			   
+		    <div class="spacer_30"></div>
+
+		    <div>
+	      		<table>
+	      			<tr>
+						<td width="50%" class="no-line">
+							<a href="pab_am_step3"><input type="button" id="btn" value="Continue" class="form_button"></a>
+						</td>
+
+							<!--	</td>
+                          	<td width="50%" class="custom_3">
+                                      <a href="#" class="link_16">Reject application</a>
+	      				</td> -->
+	      			</tr>
+	      		</table>
+	      	</div>
+		</div>
+
+
+		<!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+		<div id="page1">
+			<div id="zoomIn">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+								</td>
+								<td class="no-line">
+									<span>Page 1 of 1</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomOut')">
+						<img class="img_resize_big" src="../../../../../public/images/pabAmend.jpeg" alt="PAB amendment form">
+					</a>
+				</div>
+			</div>
+
+			<div  id="zoomOut">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+								</td>
+								<td class="no-line">
+									<span>Page 1 of 1</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomIn')">
+						<img class="img_resize_big_magnified" src="../../../../../public/images/pabAmendZoom.jpg" alt="PAB amendment form">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+	</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function add_additional_name()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name1").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name2").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name3").style.display = 'none';
+	  }
+
+	}
+
+	document.getElementById("name1").style.display = 'none';
+	document.getElementById("name2").style.display = 'none';
+	document.getElementById("name3").style.display = 'none';
+
+</script>
+<script>
+
+	function addAdditionalAddress()
+	{
+	  if (document.getElementById("address1").style.display == 'none')
+	  {
+	    document.getElementById("address1").style.display = 'block';
+	  }
+
+	  else if (document.getElementById("address1").style.display == 'block')
+	  {
+	    document.getElementById("address2").style.display = 'block';
+	  }
+	}
+
+	document.getElementById("address1").style.display = 'none';
+	document.getElementById("address2").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		} 
+
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+<script>
+
+  /*  window.onscroll = function() {myFunction()};
+
+    function myFunction()
+    {
+        if (document.body.scrollTop > 230)
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width content-fixed";
+        }
+        else
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width";
+        }
+    } */
+
+</script>
+
+
+
+<!--<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Debtor name</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_debtor_name">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Quinton Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">AKA</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_AKA">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">Quinton Calista Nadar</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Occupation</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_occ">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Psychiatrist</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Address(es)</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_address">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">10318 Bill Crossing<br>Brakuston<br>Leopoldshire<br>Essex<br>UN48 7XX</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">17 Golden Knowes Road<br>FRITH<br>Durham<br>ME13 9AY</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_no_add2">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Court details</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_edit">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Court name</span></td>
+					<td width="50%"><span class="text_review_table">Harlow County Court</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Reference</span></td>
+					<td colspan="2"><span class="text_review_table">38 of 2014</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Year</span></td>
+					<td colspan="2"><span class="text_review_table">2014</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div> -->
+
+</html>

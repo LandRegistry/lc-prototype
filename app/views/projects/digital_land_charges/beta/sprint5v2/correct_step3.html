@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Correction</h1>
+
+	<div class="spacer_10"></div>
+
+	<div class="text_16_gray">
+		<a href="correct_step2" class="link_16 no_link_style">1. View and correct details</a>
+		&nbsp;&nbsp;
+		<span class="text_16_bold">2. Check details</span>
+	</div>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+	    <div class="column-form">
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Debtor details</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link_16_right" href="correct_step2">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Forename</span></td>
+					<td width="50%"><span class="text_review_table">Claire</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+					<td colspan="2"><span class="text_review_table">Reeves</span></td></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Occupation</span></td>
+					<td colspan="2"><span class="text_review_table"></span></td>
+				</tr>
+				<tr>
+					<td colspan="1" valign="top"><span class="text_review_table_bold">Address</span></td>
+					<td colspan="2"><span class="text_review_table">20 Kendell Street<br>Whittlesey<br>Peterborough<br>Northamptonshire<br>PE12 3DX</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+
+			<table class="review_table">   
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Particulars of court</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link_16_right" href="correct_step2">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Court name</span></td>
+					<td width="50%"><span class="text_review_table">Peterborough County Court</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Reference</span></td>
+					<td colspan="2"><span class="text_review_table">998 of 2016</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Year</span></td>
+					<td colspan="2"><span class="text_review_table">2016</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+			<div class="spacer_30"></div>
+
+			<p class="text_20_bold">Do you need a K22?</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<fieldset class="inline">
+					<legend class="visuallyhidden">K22</legend>
+
+					<label class="block-label" for="yes">
+						<input id="yes" type="radio" name="k22" value="Yes">
+						Yes
+					</label>
+					<label class="block-label" for="no">
+						<input id="no" type="radio" name="k22" value="no" checked>
+						No
+					</label>
+				</fieldset>
+			</div>
+
+		    <div class="spacer_30"></div>
+
+
+		    <div>
+	      		<table>
+	      			<tr>
+						<td width="50%" class="no-line">
+							<a href="correct_success"><input type="button" id="btn" value="Complete" class="form_button"></a>
+						</td>
+							<!--	</td>
+                          	<td width="50%" class="custom_3">
+                                      <a href="#" class="link_16">Reject application</a>
+	      				</td> -->
+	      			</tr>
+	      		</table>
+	      	</div>
+		</div>
+
+
+		<!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+		<div id="form_page">
+			<div id="page1">
+				<div id="zoomIn">
+					<div class="column-scan">
+						<div>
+							<table>
+								<tr>
+									<td class="magnify_glass">
+										<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+									</td>
+									<td class="pagination_scanned_pages custom_2 no-line">
+										<span>Page 1 of 1</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<a href="javascript:show('zoomOut')">
+							<img class="img_resize_big" src="../../../../../public/images/WOBcorrect.jpg" alt="WOB document">
+						</a>
+					</div>
+				</div>
+
+
+				<div  id="zoomOut">
+					<div class="column-scan">
+						<div>
+							<table>
+								<tr>
+									<td class="magnify_glass">
+										<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+									</td>
+									<td class="pagination_scanned_pages custom_2">
+										<span>Page 1 of 1</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<a href="javascript:show('zoomIn')">
+							<img class="img_resize_big_magnified" src="../../../../../public/images/WOBcorrectzoom.jpg" alt="WOB document">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+	</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
