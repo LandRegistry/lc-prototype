@@ -32,11 +32,10 @@
 	<div class="grid-row">
 	    <div class="column-form">
 			<p class="text_24_bold">Original registration details</p>
-
+			<div class="spacer_5"></div>
 			<p class="text_indent">Please check information and complete additional information prior to cancelling</p>
 
-			<div class="spacer_10"></div>
-
+			<div class="spacer_5"></div>
 
 			<table class="review_table">
 				<tr>
@@ -90,14 +89,23 @@
 
 
 			<div class="spacer_30"></div>
-			<div class="spacer_30"></div>
+			<div class="spacer_10"></div>
 
-			<p class="text_18_bold">Additional information</p>
+			<p class="text_20_bold">Additional information</p>
+			<div class="spacer_5"></div>
+			<p class="text_indent">Please select whether a plan is attached, or complete the additional information</p>
 
+			<label class="block-label" for="planAttach">
+				<input id="planAttach" name="planAttach" type="checkbox" value="plan">
+				Plan attached
+			</label>
+			<p class="font-xsmall" style="padding: 15px 20px 15px 175px; margin-bottom: 0">or</p>
 			<div class="spacer_10"></div>
 
 			<div class="form">
-				<textarea class="form_textmemo" rows="4">Part cancelled so far as it relates too...</textarea>
+				<p class="font-xsmall" style="margin-bottom: 3px">Part cancelled so far only as it relates to ... </p>
+				<textarea class="form_textmemo" rows="2"></textarea>
+				<p class="font-xsmall" style="margin-top: 3px">... as described on application to cancel.</p>
 			</div>
 
 			<div class="spacer_30"></div>
@@ -110,13 +118,8 @@
 	      						<a href="k11_step3"><input type="submit" value="Continue" class="form_button"></a>
 							</div>
 	      				</td>
-	      			<!--	<td width="50%" class="custom_3">
-					      	<a href="#" class="link_16">Reject application</a> 
-	      				</td> -->
 	      			</tr>
 	      		</table>
-
-				<a href="uc" class="link_16">Return to this application later</a>
 	      	</div>
 	    </div>
 

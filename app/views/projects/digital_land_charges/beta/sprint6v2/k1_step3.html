@@ -36,9 +36,15 @@
 
             <div class="spacer_10"></div>
 
-            <div class="form">
-                <label class="form_label">Key number</label>
-                <input class="form_textfield" type="text" id="KN" onkeyup="getAppnDetl()" autofocus>
+            <div id="error" class="form-group-error" >
+                <span class="error-message">
+                    The key number is invalid.
+                </span>
+
+                <div class="form" id="keyNum">
+                    <label class="form_label">Key number</label>
+                    <input class="form_textfield" type="text" id="KN" onkeyup="getAppnDetl()" autofocus>
+                </div>
             </div>
 
             <div class="form">
@@ -73,7 +79,12 @@
                 </div>
                 <div>
                     <label class="block-label">
-                        <input type="radio" value="direct-debit"id="DD"><span class="text_16">Direct debit</span>
+                        <input type="radio" value="direct-debit" id="DD"><span class="text_16">Direct debit</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="no-fee"><span class="text_16">No fee</span>
                     </label>
                 </div>
             </fieldset>
@@ -86,6 +97,9 @@
                         <td width="50%" class="no-line">
                             <a href="lc_reg_list_success"><input type="submit" value="Complete" class="form_button"></a>
                         </td>
+                        <td id="reject" width="50%" class="custom_3">
+                            <a href="lc_reg_list_reject" class="link_16">Reject application</a>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -94,14 +108,6 @@
         <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
         <div id="page1">
             <div id="zoomIn">
-              <!--  <div class="column-scan-small">
-                    <div class="spacer_30"></div>
-
-                    <div class="spacer_5"></div>
-
-                    <img class="img_resize_small_selected" src="../../../../../public/images/K1.jpg" alt="K1 document">
-                </div> -->
-
                 <div class="column-scan">
                     <div>
                         <table>
@@ -123,17 +129,6 @@
             </div>
 
             <div  id="zoomOut">
-              <!--  <div class="column-scan-small">
-
-                    <div class="spacer_30"></div>
-
-                    <div class="spacer_5"></div>
-
-                    <div style="position:relative">
-                        <img class="img_resize_small_selected" src="../../../../../public/images/K1.jpg" alt="K1 document">
-                    </div>
-                </div> -->
-
                 <div class="column-scan">
                     <div>
                         <table>
@@ -167,13 +162,25 @@
     function getAppnDetl()
     {
         var content = document.getElementById("KN").value;
-        if (content.length == 7){
-            document.getElementById("name").value = "Harrison Hill";
-            document.getElementById("address").value = "47 George Street \nBrundall \nNR13 4QL";
-            document.getElementById("ref").focus();
-            document.getElementById("DD").checked = true;
+         if (content.length == 7){
+
+            if (content == 9999999) {
+                document.getElementById("error").style.visibility = 'visible';
+                document.getElementById("reject").style.visibility = 'visible';
+            }
+
+            else {
+                document.getElementById("name").value = "Harrison Hill";
+                document.getElementById("address").value = "47 George Street \nBrundall \nNR13 4QL";
+                document.getElementById("ref").focus();
+                document.getElementById("DD").checked = true;
+            }
         }
     }
+
+    document.getElementById("error").style.visibility = 'hidden';
+    document.getElementById("keyNum").style.visibility = 'visible';
+    document.getElementById("reject").style.visibility = 'hidden';
 
 </script>
 <script>

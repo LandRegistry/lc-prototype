@@ -15,63 +15,77 @@
 
 <div id="content">
 	<div class="spacer_10"></div>
-	<h1 class="title_36">Rectification</h1>
+	<h1 class="title_36">Unidentified application</h1>
 
 	<div class="spacer_10"></div>
 
-	<div class="text_16_gray">
-	    <span class="text_16_bold">1. Retrieve original</span>
-	    &nbsp;&nbsp;
-	    2. View and amend original
-		&nbsp;&nbsp;
-		3. Check details
-	    &nbsp;&nbsp;
-	    4. Conveyancer and fees
-	</div>
-
-	<div class="spacer_30"></div>
-
 	<div class="grid-row">
 	    <div class="column-form">
-	      	<p class="text_24_bold">Retrieve original</p>
+			<div>
+				<a name="question"></a>
+				<div class="spacer_20"></div>
+				<p class="text_20_bold">Which list should the application be in?</p>
+				<div class="spacer_10"></div>
 
-	      	<div class="spacer_20"></div>
+				<table class="custom_1">
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Bankruptcy registration</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Amendment</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Land charge registration</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Priority notice</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Rectification</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Renewal</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Full search</span></td>
+					</tr>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Bankruptcy search</span></td>
+					</tr>
 
-    		<div class="form">
-		        <label class="form_label">Original registration number</label><br>
-		        <input class="form_textfield" type="text" style="width: 200px" autofocus>
-		    </div>
+					<tr>
+						<td width="10%"><input type="radio" style="text-align:center; vertical-align: middle;"></td>
+						<td width="80%"><span class="text_review_table">Cancellation</span></td>
+					</tr>
+				</table>
 
-			<div class="form">
-				<label class="form_label">Date of registration</label><br>
-				<p class="text_indent">For example, 31/3/2014</p>
-				<input class="form_textfield" type="text" style="width: 150px">
+				<div class="spacer_20"></div>
 			</div>
-
-		    <div class="spacer_30"></div>
 
       		<div>
 	      		<table>
 	      			<tr>
 	      				<td width="50%" class="no-line">
-	      					<a href="rc_step2"><input type="submit" value="Continue" class="form_button"></a>
+							<a href="unid_list_success"><input type="submit" value="Move" class="form_button"></a>
 	      				</td>
 	      				<td width="50%" class="custom_3">
-					      	<a href="lc_rc_list_reject" class="link_16">Reject application</a>
+					      	<a href="unid_list_reject" class="link_16">Reject application</a>
 	      				</td>
 	      			</tr>
 	      		</table>
-
-				<div class="spacer_20"></div>
-				<p class="text_16">Wrong application?</p>
-				<a href="lc_rc_list" class="link_16">Move to the unidentified applications list</a>
 	      	</div>
-
 	    </div>
 
 
 		<!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
-
 	    <div id="page1">
 		    <div id="zoomIn">
 				<div class="column-scan">
@@ -81,7 +95,7 @@
 			      				<td class="magnify_glass">
 			      					<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
 			      				</td>
-			      				<td class="pagination_scanned_pages custom_2">
+			      				<td class="no-line">
 							      	<span>Page 1 of 1</span>
 			      				</td>
 			      			</tr>
@@ -89,7 +103,7 @@
 			      	</div>
 
 			      	<a href="javascript:show('zoomOut')">
-			      		<img class="img_resize_big" src="../../../../../public/images/K9.jpg" alt="k9 application">
+			      		<img class="img_resize_big" src="../../../../../public/images/cancellation.jpg" alt="K11 form">
 			      	</a>
 			    </div>
 			</div>
@@ -102,7 +116,7 @@
 			      				<td class="magnify_glass">
 			      					<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
 			      				</td>
-			      				<td class="pagination_scanned_pages custom_2">
+			      				<td class="no-line">
 							      	<span>Page 1 of 1</span>
 			      				</td>
 			      			</tr>
@@ -110,7 +124,7 @@
 			      	</div>
 
 			      	<a href="javascript:show('zoomIn')">
-			      		<img class="img_resize_big_magnified" src="../../../../../public/images/K9zoom.jpg" alt="k9 application">
+			      		<img class="img_resize_big_magnified" src="../../../../../public/images/cancellationzoom.jpg" alt="K11 form">
 			      	</a>
 			    </div>
 			</div>
