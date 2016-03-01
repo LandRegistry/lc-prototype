@@ -20,7 +20,7 @@
 	<div class="spacer_10"></div>
 
 	<div class="text_16_gray">
-		<span class="text_16_bold">1. Input court details</span>
+		<span class="text_16_bold">1. Input official details</span>
 		&nbsp;&nbsp;
 		2. Input debtor details
 		&nbsp;&nbsp;
@@ -33,24 +33,59 @@
 
 	<div class="grid-row">
 	    <div class="column-form">
-			<p class="text_24_bold">Particulars of court</p>
+			<p class="text_24_bold">Is the application from a court or the office of adjudicator?</p>
 
 			<div class="spacer_10"></div>
 
 			<div class="form">
-				<label class="form_label">Name</label>
-				<input class="form_textfield" type="text">
+				<fieldset>
+					<legend class="visuallyhidden">Court or insolvency</legend>
+
+					<label class="block-label" for="court">
+						<input id="court" type="radio" name="CorI" value="Court" onclick="toggleAppn()" checked>
+						Court
+					</label>
+					<label class="block-label" for="ins">
+						<input id="ins" type="radio" name="CorI" value="Insolvency" onclick="toggleAppn()">
+						Office of adjudicator
+					</label>
+				</fieldset>
 			</div>
 
-			<div class="form">
-				<label class="form_label">Court reference no.</label>
-				<input class="form_textfield" type="text">
+			<div class="spacer_20"></div>
+
+			<div id="courtInfo">
+				<p class="text_24_bold">Particulars of court</p>
+
+				<div class="spacer_10"></div>
+
+				<div class="form">
+					<label class="form_label">Name</label>
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">Court reference</label>
+					<input class="form_textfield" type="text">
+				</div>
+
+				<div class="form">
+					<label class="form_label">Case year</label><br>
+					<input class="form_textfield" type="text" style="width: 100px">
+				</div>
 			</div>
 
-			<div class="form">
-				<label class="form_label">Case year</label><br>
-				<input class="form_textfield" type="text" style="width: 100px">
+			<div id="insInfo">
+				<p class="text_24_bold">Particulars of adjudicator</p>
+
+				<div class="spacer_10"></div>
+
+				<div class="form">
+					<label class="form_label">Adjudicator reference</label>
+					<input class="form_textfield" type="text">
+				</div>
 			</div>
+
 
 			<div class="spacer_30"></div>
 
@@ -67,7 +102,9 @@
 	      			</tr>
 	      		</table>
 
-				<a href="uc" class="link_16">Return to this application later</a>
+				<div class="spacer_20"></div>
+				<p class="text_16">Wrong application?</p>
+				<a href="b_reg_list" class="link_16">Move to the unidentified applications list</a>
 	      	</div>
 	    </div>
 
@@ -239,6 +276,23 @@
 
 </body>
 
+<script>
+
+    function toggleAppn()
+    {
+        if (document.getElementById("court").checked) {
+           document.getElementById("courtInfo").style.display = 'block';
+           document.getElementById("insInfo").style.display = 'none';
+        }
+        else {
+           document.getElementById("courtInfo").style.display = 'none';
+           document.getElementById("insInfo").style.display = 'block';
+        }
+    }
+
+    document.getElementById("insInfo").style.display = 'none';
+
+</script>
 <script>
 
 	function page()
