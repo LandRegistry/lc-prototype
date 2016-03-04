@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Renewal</h1>
+
+    <div class="spacer_10"></div>
+
+    <div class="text_16_gray">
+        <a href="k7_step1" class="link_16 no_link_style">1. Retrieve original</a>
+        &nbsp;&nbsp;
+        <a href="k7_step2" class="link_16 no_link_style">2. View and cancel</a>
+        &nbsp;&nbsp;
+        <span class="text_16_bold">3. Conveyancer and fees</span>
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <!-- CONVEYANCER -->
+            <p class="text_24_bold">Conveyancer</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <label class="form_label">Key number</label>
+                <input class="form_textfield" type="text" id="KN" onkeyup="getAppnDetl()" autofocus>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Conveyancer name</label>
+                <input class="form_textfield" type="text" id="name">
+            </div>
+
+            <div class="form">
+                <label class="form_label">Conveyancer address</label>
+                <p class="text_indent">This information must be provided.<br>If dispatch address is different, please overkey.</p>
+                <textarea class="form_textmemo" rows="5" id="address"></textarea>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Conveyancer reference</label>
+                <input class="form_textfield" type="text" id="ref">
+            </div>
+
+            <div class="spacer_30"></div>
+
+
+            <!-- FEES -->
+            <p class="text_24_bold">Fees</p>
+
+            <div class="spacer_10"></div>
+
+            <fieldset class="inline">
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="pre-paid"><span class="text_16">Pre-paid</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="direct-debit"><span class="text_16">Direct debit</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="no-fee"><span class="text_16">No fee</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="spacer_30"></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td width="50%" class="no-line">
+                            <a href="lc_rn_list_success"><input type="submit" value="Complete" class="form_button"></a>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="rn_store" class="link_16">Return to this application later</a>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+                                </td>
+                                <td class="no-line">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/k7.jpg" alt="K7 form">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+                                </td>
+                                <td class="no-line">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/k7zoom.jpg" alt="K7 form">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    function getAppnDetl()
+    {
+        if (content.length == 7){
+            document.getElementById("name").value = "Furgasons and Co";
+            document.getElementById("address").value = "7 Emerson Road \nKirby Bedon \nNorfolk \nNR14 6UE";
+            document.getElementById("ref").focus();
+            document.getElementById("DD").checked = true;
+        }
+    }
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
+

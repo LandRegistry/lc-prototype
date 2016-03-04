@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Land charge registration</h1>
+
+    <div class="spacer_10"></div>
+
+    <div class="text_16_gray">
+        <span class="text_16_bold">1. Input details</span>
+        &nbsp;&nbsp;
+        2. Check and verify details
+        &nbsp;&nbsp;
+        3. Conveyancer and fees
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <!-- CHARGE -->
+            <p class="text_24_bold">Class of charge</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <label class="form_label">Class and subclass</label><br>
+                <input class="form_textfield" type="text" list="charges" style="width: 150px; background: transparent;" autofocus>
+                <datalist id="charges">
+                    <option value=""></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                    <option value="C3">C3</option>
+                    <option value="C4">C4</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="E">E</option>
+                    <option value="DA">DA</option>
+                    <option value="ANN">ANN</option>
+                    <option value="LC">LC</option>
+                </datalist>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Priority Notice</label><br>
+                <input class="form_textfield" type="text" style="width:150px">
+            </div>
+
+            <div class="spacer_30"></div>
+
+
+            <!-- LAND INFO -->
+            <p class="text_24_bold">Particulars of land affected</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <label class="form_label">County or unitary authority area</label>
+                <input class="form_textfield" type="text">
+            </div>
+
+            <div id="county1">
+                <div class="form">
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div>
+                <a href="#here" onclick="document.getElementById('county1').style.display = 'block';" class="link_14_right" id="#">Add additional county or unitary authority</a>
+            </div>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <label class="form_label">District</label>
+                <input class="form_textfield" type="text">
+            </div>
+
+            <div class="form">
+                <label class="form_label">Short description</label>
+                <textarea class="form_textmemo"></textarea>
+            </div>
+
+            <div class="spacer_30"></div>
+
+
+            <!-- ESTATE OWNER -->
+            <p class="text_24_bold">Estate owner details</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <p class="text_indent">Please select the type of estate owner from the list</p>
+                <select id="estateOwnerTypes" class="drop-down">
+                    <option value="privateIndividual" selected="selected">Private individual</option>
+                    <option value="limitedCompany">Limited company</option>
+                    <option value="localAuthority">Local authority</option>
+                    <option value="complexName">Complex name</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div id="private">
+                <div class="form">
+                    <label class="form_label">Forename(s)</label>
+                    <input class="form_textfield" type="text">
+                </div>
+
+                <div class="form">
+                    <label class="form_label">Surname</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="limited">
+                <div class="form">
+                    <label class="form_label">Company name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="local">
+                <div class="form">
+                    <label class="form_label">Local authority full name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+                <div class="form">
+                    <label class="form_label">Local authority area</label>
+                    <p class="text_indent">This is the area the local authority affects</p>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="complex">
+                <div class="form">
+                    <label class="form_label">Complex name</label>
+                    <input class="form_textfield" type="text">
+                    <div class="spacer_5"></div>
+                    <a href="#here" class="link_14_right">Look up complex name</a>
+                </div>
+            </div>
+
+            <div id="other">
+                <div class="form">
+                    <label class="form_label">Name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Trade, title or profession</label>
+                <input class="form_textfield" type="text">
+            </div>
+
+
+            <!-- FURTHER INFO -->
+            <div class="spacer_30"></div>
+
+            <p class="text_24_bold">Additional information</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <textarea class="form_textmemo" rows="4"></textarea>
+            </div>
+
+            <div class="spacer_30"></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td width="50%" class="no-line">
+                            <a href="k1_step2"><input type="submit" value="Continue" class="form_button"></a>
+                        </td>
+                        <td width="50%" class="custom_3">
+                            <a href="lc_reg_list_reject" class="link_16">Reject application</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="lc_store" class="link_16">Return to this application later</a>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan">
+                    <div>
+                        <p class="text_16">
+                            Wrong form?
+                            <a href="unid_step1" class="link_16_right">Choose the correct form type</a>
+                        </p>
+                        <hr>
+
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in">Zoom in</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/K1.jpg" alt="WOB document">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut">Zoom out</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/K1zoom.jpg" alt="K1 document">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    document.getElementById("estateOwnerTypes").onchange = function() {
+        var type = this.value;
+
+        if (type == "privateIndividual") {
+            document.getElementById("private").style.display = 'block';
+            document.getElementById("limited").style.display = 'none';
+            document.getElementById("local").style.display = 'none';
+            document.getElementById("complex").style.display = 'none';
+            document.getElementById("other").style.display = 'none';
+        }
+        if (type == "limitedCompany") {
+            document.getElementById("limited").style.display = 'block';
+            document.getElementById("private").style.display = 'none';
+            document.getElementById("local").style.display = 'none';
+            document.getElementById("complex").style.display = 'none';
+            document.getElementById("other").style.display = 'none';
+        }
+        if (type == "localAuthority") {
+            document.getElementById("local").style.display = 'block';
+            document.getElementById("private").style.display = 'none';
+            document.getElementById("limited").style.display = 'none';
+            document.getElementById("complex").style.display = 'none';
+            document.getElementById("other").style.display = 'none';
+        }
+        if (type == "complexName") {
+            document.getElementById("complex").style.display = 'block';
+            document.getElementById("private").style.display = 'none';
+            document.getElementById("limited").style.display = 'none';
+            document.getElementById("local").style.display = 'none';
+            document.getElementById("other").style.display = 'none';
+        }
+        if (type == "other") {
+            document.getElementById("other").style.display = 'block';
+            document.getElementById("private").style.display = 'none';
+            document.getElementById("limited").style.display = 'none';
+            document.getElementById("local").style.display = 'none';
+            document.getElementById("complex").style.display = 'none';
+        }
+    }
+
+    document.getElementById("limited").style.display = 'none';
+    document.getElementById("local").style.display = 'none';
+    document.getElementById("complex").style.display = 'none';
+    document.getElementById("other").style.display = 'none';
+
+</script>
+<script>
+
+	function add_additional_county()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("county1").style.display = 'none';
+	  }
+	}
+
+	document.getElementById("county1").style.display = 'none';
+
+</script>
+<script>
+
+	function page()
+	{
+	  if (document.getElementById("page1").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'none';
+	    document.getElementById("page_b").style.display = 'block';
+	    
+	  }
+	  else if (document.getElementById("page2").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'block';
+	    document.getElementById("page_b").style.display = 'none';
+	    
+	  }
+	}
+
+	document.getElementById("page_a").style.display = 'none';
+	document.getElementById("page_b").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+
+</html>
