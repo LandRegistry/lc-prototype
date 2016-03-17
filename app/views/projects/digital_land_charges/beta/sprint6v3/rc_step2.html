@@ -175,14 +175,24 @@
 
 			<div class="form">
 				<fieldset>
-					<legend class="visuallyhidden">chargee or instrument</legend>
-
 					<label class="block-label" for="chargee">
-						<input id="chargee" type="checkbox" name="chargee" value="chargee">
+						<input id="chargee" type="checkbox" name="chargee" value="chargee" onclick="toggleChargee()">
 						Chargee details
 					</label>
+				</fieldset>
+
+				<div class="form" id="chargees">
+
+					<label class="form_label">amended from</label>
+					<textarea class="form_textmemo" rows="3"></textarea>
+
+					<label class="form_label">to</label><br>
+					<textarea class="form_textmemo" rows="3"></textarea>
+				</div>
+
+				<fieldset>
 					<label class="block-label" for="doi">
-						<input id="doi" type="checkbox" name="doi" value="instrument" onclick="toggleDoI()">
+						<input id="doi" type="checkbox" name="doi" value="instrument" onclick="toggleDate()">
 						Date of instrument
 					</label>
 				</fieldset>
@@ -266,17 +276,33 @@
 
 <script>
 
-    function toggleDoI()
+    function toggleDate()
     {
         if (document.getElementById("doi").checked) {
            document.getElementById("dates").style.display = 'block';
         }
         else {
-           document.getElementById("dates").style.display = 'none';
+        	document.getElementById("dates").style.display = 'none';
         }
     }
 
     document.getElementById("dates").style.display = 'none';
+
+</script>
+<script>
+
+    function toggleChargee()
+    {
+        if (document.getElementById("chargee").checked) {
+           document.getElementById("chargees").style.display = 'block';
+        }
+
+        else {
+    		document.getElementById("chargees").style.display = 'none';
+        }
+    }
+
+    document.getElementById("chargees").style.display = 'none';
 
 </script>
 <script>
