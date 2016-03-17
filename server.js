@@ -19,7 +19,7 @@ var path = require('path'),
 //  }
 
   //app.use(express.basicAuth(username, password));
-  app.use(express.basicAuth('Prototype', 'testing'));
+  app.use(express.basicAuth('Prototype', 'finished'));
 //}
 
 // Application settings
