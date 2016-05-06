@@ -1371,15 +1371,13 @@ p {
 .text-secondary {
   color: #6f777b; }
 
-.link {
-  color: #005ea5;
-  text-decoration: underline; }
 
-.link:visited {
-  color: #4c2c92; }
+/*.link:visited {
+  color: #4c2c92; }*/
 
 .link:hover {
-  color: #2e8aca; }
+  font-weight: 700;
+ }
 
 .link:active {
   color: #005ea5; }
