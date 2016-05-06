@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Correction</h1>
+
+	<div class="spacer_10"></div>
+
+	<div class="text_16_gray">
+		<a href="correct_lc_step1" class="link link_16 no_link_style">1. View and correct details</a>
+		&nbsp;&nbsp;
+		<span class="text_16_bold">2. Check details</span>
+	</div>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+	    <div class="column-form">
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Class of charge</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link link_16_right" href="correct_lc_step1">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Class and subclass</span></td>
+					<td colspan="2"><span class="text_review_table">C1</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Particulars of land affected</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link link_16_right" href="correct_lc_step1">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">County or unitary authority area</span></td>
+					<td width="50%"><span class="text_review_table">Leicester</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">District</span></td>
+					<td colspan="2"><span class="text_review_table">Charnwood</span></td>
+				</tr>
+				<tr>
+					<td colspan="1" valign="top"><span class="text_review_table_bold">Short description</span></td>
+					<td colspan="2"><span class="text_review_table">91 Earls Avenue LE11 2TR</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Estate owner details</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link link_16_right" href="correct_lc_step1">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Forename</span></td>
+					<td width="50%"><span class="text_review_table">Summer</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+					<td colspan="2"><span class="text_review_table">Lord</span></td>
+				</tr>
+				<tr>
+					<td colspan="1" valign="top"><span class="text_review_table_bold">Title, trade or profession</span></td>
+					<td colspan="2"><span class="text_review_table"></span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Additional information</span></th>
+					<th colspan="1" class="table_text_black link_16_right">
+						<a class="link link_16_right" href="correct_lc_step1">Change</a>
+					</th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Information</span></td>
+					<td colspan="2"><span class="text_review_table"></span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+			<div class="spacer_20"></div>
+
+			<p class="text_20_bold">Is a K22 required?</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<fieldset class="inline">
+					<legend class="visuallyhidden">K22</legend>
+
+					<label class="block-label" for="yesK22">
+						<input id="yesK22" type="radio" name="k22" value="yesK22" onclick="printOption()">
+						Yes
+					</label>
+					<label class="block-label" for="noK22">
+						<input id="noK22" type="radio" name="k22" value="noK22" onclick="printOption()">
+						No
+					</label>
+				</fieldset>
+			</div>
+
+			<div id="print">
+				<div class="spacer_20"></div>
+				<p class="text_20_bold">Where should the K22 to printed?</p>
+				<div class="spacer_10"></div>
+
+				<div class="form">
+					<fieldset class="inline">
+						<legend class="visuallyhidden">Print options</legend>
+
+						<label class="block-label" for="central">
+							<input id="central" type="radio" name="printOp" value="central" onclick="enableBtn()">
+							Centrally
+						</label>
+						<label class="block-label" for="local">
+							<input id="local" type="radio" name="printOp" value="local" onclick="enableBtn()">
+							Locally
+						</label>
+					</fieldset>
+				</div>
+			</div>
+
+		    <div class="spacer_30"></div>
+
+
+		    <div>
+	      		<table>
+	      			<tr>
+						<td width="50%" class="no-line">
+							<a href="correct_success"><input type="button" id="btn" value="Complete" class="form_button" disabled></a>
+						</td>
+	      			</tr>
+	      		</table>
+	      	</div>
+		</div>
+
+
+
+		<div id="form_page">
+			<div id="page1">
+				<p class="text_18" align="center">Please view application in Image Retrieval if required</p>
+			</div>
+		</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function printOption()
+	{
+		if (document.getElementById("yesK22").checked){
+			document.getElementById("print").style.display = 'block';
+			document.getElementById("btn").disabled = true;
+		}
+
+		else {
+			document.getElementById("print").style.display = 'none';
+			document.getElementById("btn").disabled = false;
+		}
+	}
+
+	document.getElementById("print").style.display = 'none';
+
+</script>
+<script>
+
+	function enableBtn()
+	{
+		document.getElementById("btn").disabled = false;
+	}
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
