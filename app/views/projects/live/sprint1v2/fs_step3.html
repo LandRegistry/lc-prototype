@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Full search</h1>
+
+    <div class="spacer_10"></div>
+
+    <div class="text_16_gray">
+        <a href="fs_step1" class="link_16 no_link_style">1. Input details</a>
+        &nbsp;&nbsp;
+        <span class="text_16_bold">2. Applicant and fees</span>
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <!-- APPLICANT -->
+            <p class="text_24_bold">Applicant</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <label class="form_label">Key number</label>
+                <!-- when this field is completed, the applicant name and address associated with the key number should
+                 be pre-populated into the relevant fields -->
+                <input class="form_textfield" type="text" autofocus>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Applicant name</label>
+                <input class="form_textfield" type="text">
+            </div>
+
+            <div class="form">
+                <label class="form_label">Applicant address</label>
+                <p class="text_indent">This information must be provided.<br>If dispatch address is different, please overkey.</p>
+                <textarea class="form_textmemo" rows="5"></textarea>
+            </div>
+
+            <div class="form">
+                <label class="form_label">Applicant reference</label>
+                <input class="form_textfield" type="text">
+            </div>
+
+            <div class="spacer_30"></div>
+
+
+            <!-- FEES -->
+            <p class="text_24_bold">Fees</p>
+
+            <div class="spacer_10"></div>
+
+            <fieldset class="inline">
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="pre-paid"><span class="text_16">Pre-paid</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="direct-debit"><span class="text_16">Direct debit</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="no-fee"><span class="text_16">No fee</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="spacer_30"></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td width="50%" class="no-line">
+                            <a href="fs_list_success"><input type="submit" value="Complete" class="form_button"></a>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="fs_store" class="link_16">Return to this application later</a>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in">Zoom in</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/K15.jpg" alt="K15 document">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut">Zoom out</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/K15zoom.jpg" alt="K15 document">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function page()
+	{
+	  if (document.getElementById("page1").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'none';
+	    document.getElementById("page_b").style.display = 'block';
+	  }
+	  else if (document.getElementById("page2").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'block';
+	    document.getElementById("page_b").style.display = 'none';
+	  }
+	}
+
+	document.getElementById("page_a").style.display = 'none';
+	document.getElementById("page_b").style.display = 'none';
+
+</script>
+<script>
+
+	function add_additional_county()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("county1").style.display = 'none';
+	  }
+	}
+
+	document.getElementById("county1").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
+

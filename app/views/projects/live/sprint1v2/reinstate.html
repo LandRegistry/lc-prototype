@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div id="breadcrumb">
+        <ol>
+            <li><a class="links" href="home">Home</a></li>
+            <li><span>Internal Functions</span></li>
+        </ol>
+    </div>
+
+    <div class="spacer_5"></div>
+
+    <div class="column-quarter" style="height: 100%">
+        <ul id="side-nav">
+            <li><a href="home">Home</a></li>
+            <li><a href="bankruptcy">Bankruptcy Applications</a></li>
+            <li><a href="land_charge">Land Charge Applications</a></li>
+            <li><a href="search">Searches</a></li>
+            <li><a href="cancellation">Cancellations</a></li>
+        <!--    <li><a href="uc">Office Copies</a></li> -->
+            <li><a href="enquiries">Enquiries</a></li>
+            <li><a class="active" href="int_func">Internal Functions</a></li>
+         <!--   <li><a href="uc">General Information</a></li> -->
+        </ul>
+    </div>
+
+    <div class="column-two-thirds">
+        <h1 class="title_36">Internal Functions</h1>
+        <div class="spacer_10"></div>
+    </div>
+
+    <div class="column-two-thirds">
+        <h2 class="title_24">Reinstate Entry</h2>
+        <div class="form">
+            <label class="form_label">Registration number</label><br>
+            <input class="form_textfield" type="text" style="width: 200px" autofocus>
+        </div>
+
+        <div class="form">
+            <label class="form_label">Date of registration</label><br>
+            <p class="text_indent">For example, 31/3/2014</p>
+            <input class="form_textfield" type="text" style="width: 150px">
+        </div>
+
+        <div class="spacer_30"></div>
+
+        <div class="form">
+            <a href="reinstate_lc_step1"><input type="submit" value="Continue" class="form_button"></a>
+        </div>
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+</html>
