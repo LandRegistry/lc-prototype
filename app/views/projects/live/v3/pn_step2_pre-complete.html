@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Priority notice registration</h1>
+
+    <div class="spacer_10"></div>
+
+    <div class="text_16_gray">
+        <a href="pn_step1" class="link_16 no_link_style">1. Input details</a>
+        &nbsp;&nbsp;
+        <span class="text_16_bold">2. Check and verify details</span>
+        &nbsp;&nbsp;
+        3. Conveyancer and fees
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <div id="data">
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Re-key estate owner details</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="pn_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Forename</span></td>
+                    <td width="50%"><input class="form_textfield_review" type="text" id="forename" onkeyup="checkData()" autofocus></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+                    <td colspan="2"><input class="form_textfield_review" type="text" id="surname" value="Stephens"></td>
+                </tr>
+                <tr>
+                    <td colspan="1" valign="top"><span class="text_review_table_bold">Title, trade or profession</span></td>
+                    <td colspan="2"><span class="text_review_table" value="Cleaner"></span></td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="spacer_20"></div>
+
+            <!-- CHARGE -->
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Re-key intended registration</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="pn_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Type</span></td>
+                    <td width="50%"><span class="text_review_table">Land Charges</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span class="text_review_table_bold">Class and subclass</span></td>
+                    <td colspan="2">
+                        <input class="form_textfield_review" type="text" id="charge" list="charges" style="width: 150px; background: transparent;" value="C4">
+                        <datalist id="charges">
+                            <option value=""></option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C1">C1</option>
+                            <option value="C2">C2</option>
+                            <option value="C3">C3</option>
+                            <option value="C4">C4</option>
+                            <option value="D1">D1</option>
+                            <option value="D2">D2</option>
+                            <option value="D3">D3</option>
+                            <option value="F">F</option>
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="spacer_20"></div>
+
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Particulars of land affected</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="pn_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">County or unitary authority area</span></td>
+                    <td width="50%"><span class="text_review_table">Bath</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><span class="text_review_table_bold">District</span></td>
+                    <td colspan="2"><span class="text_review_table">Englishcombe</span></td>
+                </tr>
+                <tr>
+                    <td colspan="1" valign="top"><span class="text_review_table_bold">Short description</span></td>
+                    <td colspan="2"><span class="text_review_table">23 Rush Hill BA2 2LN</span></td>
+                </tr>
+            </table>
+
+            <div class="spacer_20"></div>
+
+            <table class="review_table">
+                <tr>
+                    <th colspan="2" class="table_text_black"><span class="text_19_gray">Additional information</span></th>
+                    <th colspan="1" class="table_text_black link_16_right">
+                        <a class="link_16_right" href="pn_step1_edit">Change</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="50%"><span class="text_review_table_bold">Information</span></td>
+                    <td colspan="2"><span class="text_review_table"></span></td>
+                </tr>
+            </table>
+
+            <div class="spacer_30"></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td width="50%" class="no-line">
+                            <a href="pn_step3"><input type="submit" value="Continue" class="form_button" id="btn" disabled></a>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="pn_store" class="link_16">Return to this application later</a>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in">Zoom in</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/K6.jpg" alt="K6 application">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut">Zoom out</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/K1zoom.jpg" alt="K6 application">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    function checkData() {
+
+        var checked = (document.getElementById("forename").value != "");
+        if (checked) {
+            document.getElementById('btn').disabled = false;
+        }
+        else {
+            document.getElementById('btn').disabled = true;
+        }
+    }
+
+</script>
+<script>
+
+	function show(column)
+	{
+
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
+
