@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Rectification</h1>
+
+	<div class="spacer_10"></div>
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+	    <div class="column-form">
+			<p class="text_24_bold">Store application</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<label class="form_label">Reason</label>
+				<textarea class="form_textmemo" rows="4"></textarea>
+			</div>
+			   
+		    <div class="spacer_30"></div>
+
+		    <div>
+	      		<table>
+	      			<tr>
+						<td width="50%" class="no-line">
+							<a href="lc_rc_list_stored"><input type="button" id="btn" value="Store" class="form_button"></a>
+						</td>
+	      			</tr>
+	      		</table>
+	      	</div>
+		</div>
+
+		<!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+		<div id="page1">
+			<div id="zoomIn">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+								</td>
+								<td class="pagination_scanned_pages custom_2 no-line">
+									<span>Page 1 of 2 &nbsp; <a class="link_14" href="javascript:show('page2')">Next</a></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomOut')">
+						<img class="img_resize_big" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+					</a>
+				</div>
+
+
+				<div class="column-scan-small">
+					<div class="spacer_30"></div>
+
+					<div class="spacer_5"></div>
+
+					<img class="img_resize_small_selected" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+
+					<div class="spacer_10"></div>
+
+					<div>
+						<img onclick="show('page2');" class="img_resize_small" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+					</div>
+				</div>
+			</div>
+
+
+			<div  id="zoomOut">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+								</td>
+								<td class="pagination_scanned_pages custom_2">
+									<span>Page 1 of 2 &nbsp; <a class="link_14" href="javascript:show('page2')">Next</a></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomIn')">
+						<img class="img_resize_big_magnified" src="../../../../../public/images/WOB1zoom.jpg" alt="WOB document">
+					</a>
+
+				</div>
+
+
+				<div class="column-scan-small">
+					<div class="spacer_30"></div>
+
+					<div class="spacer_5"></div>
+
+					<div style="position:relative">
+						<img class="img_resize_small_selected" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+						<div class="selected_area_1"></div>
+					</div>
+
+					<div class="spacer_10"></div>
+
+					<div >
+						<img onclick="show('page2');" class="img_resize_small" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+		<!-- ///////////////////////////////// Script for page 2 in two columns ///////////////////////////////// -->
+
+		<div id="page2">
+			<div id="zoomInp2">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+								</td>
+								<td class="pagination_scanned_pages custom_2">
+									<span>Page 2 of 2 &nbsp; <a class="link_14" href="javascript:show('page1')">Previous</a></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomOut')">
+						<img class="img_resize_big" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+					</a>
+				</div>
+
+
+				<div class="column-scan-small">
+					<div class="spacer_30"></div>
+
+					<div class="spacer_5"></div>
+
+					<img onclick="show('page1');" class="img_resize_small" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+
+					<div class="spacer_10"></div>
+
+					<div >
+						<img class="img_resize_small_selected" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+					</div>
+				</div>
+
+			</div>
+
+			<div id="zoomOutp2">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+								</td>
+								<td class="pagination_scanned_pages custom_2">
+									<span>Page 2 of 2 &nbsp; <a class="link_14" href="javascript:show('page1')">Previous</a></span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomIn')">
+						<img class="img_resize_big_magnified" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+					</a>
+				</div>
+
+
+				<div class="column-scan-small">
+					<div class="spacer_30"></div>
+
+					<div class="spacer_5"></div>
+
+					<img onclick="show('page1');" class="img_resize_small" src="../../../../../public/images/WOB.jpg" alt="WOB document">
+
+					<div class="spacer_10"></div>
+
+					<div style="position:relative">
+						<img class="img_resize_small_selected" src="../../../../../public/images/WOB_page2.jpg" alt="WOB document">
+						<div class="selected_area_10"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ///////////////////////////////// End of script for page 2 in two columns ///////////////////////////////// -->
+	</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+	function add_additional_name()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name1").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name2").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name3").style.display = 'none';
+	  }
+
+	}
+
+	document.getElementById("name1").style.display = 'none';
+	document.getElementById("name2").style.display = 'none';
+	document.getElementById("name3").style.display = 'none';
+
+</script>
+<script>
+
+	function addAdditionalAddress()
+	{
+	  if (document.getElementById("address1").style.display == 'none')
+	  {
+	    document.getElementById("address1").style.display = 'block';
+	  }
+
+	  else if (document.getElementById("address1").style.display == 'block')
+	  {
+	    document.getElementById("address2").style.display = 'block';
+	  }
+	}
+
+	document.getElementById("address1").style.display = 'none';
+	document.getElementById("address2").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		} 
+
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+<script>
+
+  /*  window.onscroll = function() {myFunction()};
+
+    function myFunction()
+    {
+        if (document.body.scrollTop > 230)
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width content-fixed";
+        }
+        else
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width";
+        }
+    } */
+
+</script>
+
+
+
+<!--<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Debtor name</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_debtor_name">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Quinton Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">AKA</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_AKA">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">Quinton Calista Nadar</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Occupation</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_occ">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Psychiatrist</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Address(es)</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_address">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">10318 Bill Crossing<br>Brakuston<br>Leopoldshire<br>Essex<br>UN48 7XX</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">17 Golden Knowes Road<br>FRITH<br>Durham<br>ME13 9AY</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_no_add2">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Court details</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_edit">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Court name</span></td>
+					<td width="50%"><span class="text_review_table">Harlow County Court</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Reference</span></td>
+					<td colspan="2"><span class="text_review_table">38 of 2014</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Year</span></td>
+					<td colspan="2"><span class="text_review_table">2014</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div> -->
+
+</html>

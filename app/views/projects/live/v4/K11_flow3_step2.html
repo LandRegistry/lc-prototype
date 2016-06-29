@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Cancellation</h1>
+
+	<div class="spacer_10"></div>
+
+	<div class="text_16_gray">
+		<a href="K11_flow3_step1" class="link_16 no_link_style">1. Retrieve original</a>
+		&nbsp;&nbsp;
+		<span class="text_16_bold">2. View and cancel</span>
+		&nbsp;&nbsp;
+		3. Conveyancer and fees
+	</div>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+	    <div class="column-form">
+			<p class="text_24_bold">Original registration details</p>
+
+			<p class="text_indent">Please check information prior to cancelling</p>
+
+			<div class="spacer_10"></div>
+
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Class of charge</span></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Class and subclass</span></td>
+					<td colspan="2"><span class="text_review_table">C1</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Particulars of land affected</span></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">County or unitary authority area</span></td>
+					<td width="50%"><span class="text_review_table">Leicester</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">District</span></td>
+					<td colspan="2"><span class="text_review_table">Charnwood</span></td>
+				</tr>
+				<tr>
+					<td colspan="1" valign="top"><span class="text_review_table_bold">Short description</span></td>
+					<td colspan="2"><span class="text_review_table">91 Earls Avenue LE11 2TR</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_gray">Estate owner details</span></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Forename</span></td>
+					<td width="50%"><input class="form_textfield_review" type="text" id="forename" onkeyup="checkData()" autofocus></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Surname</span></td>
+					<td colspan="2"><input class="form_textfield_review" type="text" id="surname" onkeyup="checkData()"></td>
+				</tr>
+				<tr>
+					<td colspan="1" valign="top"><span class="text_review_table_bold">Title, trade or profession</span></td>
+					<td colspan="2"><span class="text_review_table"></span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div>
+
+      		<div>
+	      		<table>
+	      			<tr>
+	      				<td width="50%" class="no-line">
+							<div id="OK">
+								<a href="k11_step3"><input type="button" id="btn" value="Continue" class="form_button" disabled></a>
+							</div>
+							<div id="error">
+								<a href="k11_flow3_step2_error"><input type="button" id="btn-error" value="Continue" class="form_button" disabled></a>
+							</div>
+	      				</td>
+						<td width="50%" class="custom_3">
+							<a href="canc_list_reject" class="link_16">Reject application</a>
+						</td>
+	      			</tr>
+	      		</table>
+
+				<a href="canc_store" class="link_16">Return to this application later</a>
+	      	</div>
+	    </div>
+
+
+		<!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+		<div id="page1">
+			<div id="zoomIn">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in"></a>
+								</td>
+								<td class="no-line">
+									<span>Page 1 of 1</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomOut')">
+						<img class="img_resize_big" src="../../../../../public/images/cancellation.jpg" alt="K11 form">
+					</a>
+				</div>
+			</div>
+
+			<div  id="zoomOut">
+				<div class="column-scan">
+					<div>
+						<table>
+							<tr>
+								<td class="magnify_glass">
+									<a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut"></a>
+								</td>
+								<td class="no-line">
+									<span>Page 1 of 1</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<a href="javascript:show('zoomIn')">
+						<img class="img_resize_big_magnified" src="../../../../../public/images/cancellationzoom.jpg" alt="K11 form">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+  	</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    function checkData() {
+
+        var checked = ((document.getElementById("forename").value != "") && (document.getElementById("surname").value != ""));
+
+        if (checked) {
+            if (document.getElementById("forename").value == "g") {
+                document.getElementById("error").style.display = 'block';
+                document.getElementById("OK").style.display = 'none';
+                document.getElementById("btn-error").disabled = false;
+            }
+            else {
+                document.getElementById("OK").style.display = 'block';
+                document.getElementById("error").style.display = 'none';
+                document.getElementById("btn").disabled = false;
+            }
+        }
+        else {
+            document.getElementById("btn").disabled = true;
+        }
+    }
+
+    document.getElementById("error").style.display = 'none';
+
+</script>
+
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+</html>
+
