@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Bankruptcy search</h1>
+
+    <div class="spacer_10"></div>
+
+    <div class="text_16_gray">
+        <span class="text_16_bold">1. Input details</span>
+        &nbsp;&nbsp;
+        2. Applicant and fees
+    </div>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-form">
+            <!-- CHARGE -->
+            <p class="text_24_bold">First name to be searched</p>
+
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <p class="text_indent">Please select the type of name from the list</p>
+                <select id="name1Types" class="drop-down">
+                    <option value="privateIndividual" selected="selected">Private individual</option>
+                    <option value="localAuthority">County Council or Greater London or Manchester Council</option>
+                    <option value="localAuthority">Parish, Town or Community Council</option>
+                    <option value="localAuthority">Other Council</option>
+                    <option value="other">Development Corporation</option>
+                    <option value="limitedCompany">Limited company</option>
+                    <option value="complexName">Complex name</option>
+                    <option value="other">Coded name</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div id="privateN1">
+                <div class="form">
+                    <label class="form_label">Forename(s)</label>
+                    <input class="form_textfield" type="text">
+                </div>
+
+                <div class="form">
+                    <label class="form_label">Surname</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="limitedN1">
+                <div class="form">
+                    <label class="form_label">Company name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="localN1">
+                <div class="form">
+                    <label class="form_label">Local authority full name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+                <div class="form">
+                    <label class="form_label">Local authority area</label>
+                    <p class="text_indent">This is the area the local authority affects</p>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="complexN1">
+                <div class="form">
+                    <label class="form_label">Complex name</label>
+                    <input class="form_textfield" type="text">
+                    <div class="spacer_5"></div>
+                    <a href="#here" class="link_14_right">Look up complex name</a>
+                </div>
+            </div>
+
+            <div id="otherN1">
+                <div class="form">
+                    <label class="form_label">Name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div class="spacer_30"></div>
+            <p class="text_24_bold">Second name to be searched</p>
+            <div class="spacer_10"></div>
+
+            <div class="form">
+                <p class="text_indent">Please select the type of name from the list</p>
+                <select id="name2Types" class="drop-down">
+                    <option value="privateIndividual" selected="selected">Private individual</option>
+                    <option value="localAuthority">County Council or Greater London or Manchester Council</option>
+                    <option value="localAuthority">Parish, Town or Community Council</option>
+                    <option value="localAuthority">Other Council</option>
+                    <option value="other">Development Corporation</option>
+                    <option value="limitedCompany">Limited company</option>
+                    <option value="complexName">Complex name</option>
+                    <option value="other">Coded name</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div id="privateN2">
+                <div class="form">
+                    <label class="form_label">Forename(s)</label>
+                    <input class="form_textfield" type="text">
+                </div>
+
+                <div class="form">
+                    <label class="form_label">Surname</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="limitedN2">
+                <div class="form">
+                    <label class="form_label">Company name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="localN2">
+                <div class="form">
+                    <label class="form_label">Local authority full name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+                <div class="form">
+                    <label class="form_label">Local authority area</label>
+                    <p class="text_indent">This is the area the local authority affects</p>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="complexN2">
+                <div class="form">
+                    <label class="form_label">Complex name</label>
+                    <input class="form_textfield" type="text">
+                    <div class="spacer_5"></div>
+                    <a href="#here" class="link_14_right">Look up complex name</a>
+                </div>
+            </div>
+
+            <div id="otherN2">
+                <div class="form">
+                    <label class="form_label">Name</label>
+                    <input class="form_textfield" type="text">
+                </div>
+            </div>
+
+            <div id="name3">
+                <div class="spacer_30"></div>
+                <p class="text_24_bold">Third name to be searched</p>
+                <div class="spacer_10"></div>
+
+                <div class="form">
+                    <p class="text_indent">Please select the type of name from the list</p>
+                    <select id="name3Types" class="drop-down">
+                        <option value="privateIndividual" selected="selected">Private individual</option>
+                        <option value="localAuthority">County Council or Greater London or Manchester Council</option>
+                        <option value="localAuthority">Parish, Town or Community Council</option>
+                        <option value="localAuthority">Other Council</option>
+                        <option value="other">Development Corporation</option>
+                        <option value="limitedCompany">Limited company</option>
+                        <option value="complexName">Complex name</option>
+                        <option value="other">Coded name</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="privateN3">
+                    <div class="form">
+                        <label class="form_label">Forename(s)</label>
+                        <input class="form_textfield" type="text">
+                    </div>
+
+                    <div class="form">
+                        <label class="form_label">Surname</label>
+                        <input class="form_textfield" type="text">
+                    </div>
+                </div>
+
+                <div id="limitedN3">
+                    <div class="form">
+                        <label class="form_label">Company name</label>
+                        <input class="form_textfield" type="text">
+                    </div>
+                </div>
+
+                <div id="localN3">
+                    <div class="form">
+                        <label class="form_label">Local authority full name</label>
+                        <input class="form_textfield" type="text">
+                    </div>
+                    <div class="form">
+                        <label class="form_label">Local authority area</label>
+                        <p class="text_indent">This is the area the local authority affects</p>
+                        <input class="form_textfield" type="text">
+                    </div>
+                </div>
+
+                <div id="complexN3">
+                    <div class="form">
+                        <label class="form_label">Complex name</label>
+                        <input class="form_textfield" type="text">
+                        <div class="spacer_5"></div>
+                        <a href="#here" class="link_14_right">Look up complex name</a>
+                    </div>
+                </div>
+
+                <div id="otherN3">
+                    <div class="form">
+                        <label class="form_label">Name</label>
+                        <input class="form_textfield" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <a href="#here" onclick="document.getElementById('name3').style.display = 'block';" class="link_14_right" id="#">Add additional name</a>
+            </div>
+
+            <div class="spacer_30"></div>
+
+            <div>
+                <table>
+                    <tr>
+                        <td width="50%" class="no-line">
+                            <a href="bs_step3"><input type="submit" value="Continue" class="form_button"></a>
+                        </td>
+                        <td width="50%" class="custom_3">
+                            <a href="bs_list_reject" class="link_16">Reject application</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="bs_store" class="link_16">Return to this application later</a>
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////// Script for page 1 in two columns ///////////////////////////////// -->
+        <div id="page1">
+            <div id="zoomIn">
+                <div class="column-scan">
+                    <div>
+                        <p class="text_16">
+                            Wrong form?
+                            <a href="unid_step1" class="link_16_right">Choose the correct form type</a>
+                        </p>
+                        <hr>
+
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomOut')"><img src="../../../../../public/images/MGlass_1.png" alt="Zoom in">Zoom in</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomOut')">
+                        <img class="img_resize_big" src="../../../../../public/images/K16.jpg" alt="K16 document">
+                    </a>
+                </div>
+            </div>
+
+            <div  id="zoomOut">
+                <div class="column-scan">
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="magnify_glass">
+                                    <a href="javascript:show('zoomIn')"><img src="../../../../../public/images/MGlass_2.png" alt="Zoom 0ut">Zoom out</a>
+                                </td>
+                                <td class="pagination_scanned_pages custom_2">
+                                    <span>Page 1 of 1</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="javascript:show('zoomIn')">
+                        <img class="img_resize_big_magnified" src="../../../../../public/images/K16zoom.jpg" alt="K16 document">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- ///////////////////////////////// End of script for page 1 in two columns ///////////////////////////////// -->
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    document.getElementById("name1Types").onchange = function() {
+        var type = this.value;
+
+        if (type == "privateIndividual") {
+            document.getElementById("privateN1").style.display = 'block';
+            document.getElementById("limitedN1").style.display = 'none';
+            document.getElementById("localN1").style.display = 'none';
+            document.getElementById("complexN1").style.display = 'none';
+            document.getElementById("otherN1").style.display = 'none';
+        }
+        if (type == "limitedCompany") {
+            document.getElementById("limitedN1").style.display = 'block';
+            document.getElementById("privateN1").style.display = 'none';
+            document.getElementById("localN1").style.display = 'none';
+            document.getElementById("complexN1").style.display = 'none';
+            document.getElementById("otherN1").style.display = 'none';
+        }
+        if (type == "localAuthority") {
+            document.getElementById("localN1").style.display = 'block';
+            document.getElementById("privateN1").style.display = 'none';
+            document.getElementById("limitedN1").style.display = 'none';
+            document.getElementById("complexN1").style.display = 'none';
+            document.getElementById("otherN1").style.display = 'none';
+        }
+        if (type == "complexName") {
+            document.getElementById("complexN1").style.display = 'block';
+            document.getElementById("privateN1").style.display = 'none';
+            document.getElementById("limitedN1").style.display = 'none';
+            document.getElementById("localN1").style.display = 'none';
+            document.getElementById("otherN1").style.display = 'none';
+        }
+        if (type == "other") {
+            document.getElementById("otherN1").style.display = 'block';
+            document.getElementById("privateN1").style.display = 'none';
+            document.getElementById("limitedN1").style.display = 'none';
+            document.getElementById("localN1").style.display = 'none';
+            document.getElementById("complexN1").style.display = 'none';
+        }
+    }
+
+    document.getElementById("limitedN1").style.display = 'none';
+    document.getElementById("localN1").style.display = 'none';
+    document.getElementById("complexN1").style.display = 'none';
+    document.getElementById("otherN1").style.display = 'none';
+
+</script>
+<script>
+
+    document.getElementById("name2Types").onchange = function() {
+        var type = this.value;
+
+        if (type == "privateIndividual") {
+            document.getElementById("privateN2").style.display = 'block';
+            document.getElementById("limitedN2").style.display = 'none';
+            document.getElementById("localN2").style.display = 'none';
+            document.getElementById("complexN2").style.display = 'none';
+            document.getElementById("otherN2").style.display = 'none';
+        }
+        if (type == "limitedCompany") {
+            document.getElementById("limitedN2").style.display = 'block';
+            document.getElementById("privateN2").style.display = 'none';
+            document.getElementById("localN2").style.display = 'none';
+            document.getElementById("complexN2").style.display = 'none';
+            document.getElementById("otherN2").style.display = 'none';
+        }
+        if (type == "localAuthority") {
+            document.getElementById("localN2").style.display = 'block';
+            document.getElementById("privateN2").style.display = 'none';
+            document.getElementById("limitedN2").style.display = 'none';
+            document.getElementById("complexN2").style.display = 'none';
+            document.getElementById("otherN2").style.display = 'none';
+        }
+        if (type == "complexName") {
+            document.getElementById("complexN2").style.display = 'block';
+            document.getElementById("privateN2").style.display = 'none';
+            document.getElementById("limitedN2").style.display = 'none';
+            document.getElementById("localN2").style.display = 'none';
+            document.getElementById("otherN2").style.display = 'none';
+        }
+        if (type == "other") {
+            document.getElementById("otherN2").style.display = 'block';
+            document.getElementById("privateN2").style.display = 'none';
+            document.getElementById("limitedN2").style.display = 'none';
+            document.getElementById("localN2").style.display = 'none';
+            document.getElementById("complexN2").style.display = 'none';
+        }
+    }
+
+    document.getElementById("limitedN2").style.display = 'none';
+    document.getElementById("localN2").style.display = 'none';
+    document.getElementById("complexN2").style.display = 'none';
+    document.getElementById("otherN2").style.display = 'none';
+
+</script>
+<script>
+
+    document.getElementById("name3Types").onchange = function() {
+        var type = this.value;
+
+        if (type == "privateIndividual") {
+            document.getElementById("privateN3").style.display = 'block';
+            document.getElementById("limitedN3").style.display = 'none';
+            document.getElementById("localN3").style.display = 'none';
+            document.getElementById("complexN3").style.display = 'none';
+            document.getElementById("otherN3").style.display = 'none';
+        }
+        if (type == "limitedCompany") {
+            document.getElementById("limitedN3").style.display = 'block';
+            document.getElementById("privateN3").style.display = 'none';
+            document.getElementById("localN3").style.display = 'none';
+            document.getElementById("complexN3").style.display = 'none';
+            document.getElementById("otherN3").style.display = 'none';
+        }
+        if (type == "localAuthority") {
+            document.getElementById("localN3").style.display = 'block';
+            document.getElementById("privateN3").style.display = 'none';
+            document.getElementById("limitedN3").style.display = 'none';
+            document.getElementById("complexN3").style.display = 'none';
+            document.getElementById("otherN3").style.display = 'none';
+        }
+        if (type == "complexName") {
+            document.getElementById("complexN3").style.display = 'block';
+            document.getElementById("privateN3").style.display = 'none';
+            document.getElementById("limitedN3").style.display = 'none';
+            document.getElementById("localN3").style.display = 'none';
+            document.getElementById("otherN3").style.display = 'none';
+        }
+        if (type == "other") {
+            document.getElementById("otherN3").style.display = 'block';
+            document.getElementById("privateN3").style.display = 'none';
+            document.getElementById("limitedN3").style.display = 'none';
+            document.getElementById("localN3").style.display = 'none';
+            document.getElementById("complexN3").style.display = 'none';
+        }
+    }
+
+    document.getElementById("limitedN3").style.display = 'none';
+    document.getElementById("localN3").style.display = 'none';
+    document.getElementById("complexN3").style.display = 'none';
+    document.getElementById("otherN3").style.display = 'none';
+
+</script>
+<script>
+
+	function add_additional_name()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name3").style.display = 'none';
+	  }
+	}
+
+	document.getElementById("name3").style.display = 'none';
+
+</script>
+<script>
+
+	function page()
+	{
+	  if (document.getElementById("page1").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'none';
+	    document.getElementById("page_b").style.display = 'block';
+	    
+	  }
+	  else if (document.getElementById("page2").checked)
+	  {
+	    document.getElementById("page_a").style.display = 'block';
+	    document.getElementById("page_b").style.display = 'none';
+	    
+	  }
+	}
+
+	document.getElementById("page_a").style.display = 'none';
+	document.getElementById("page_b").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		}
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+
+</html>
