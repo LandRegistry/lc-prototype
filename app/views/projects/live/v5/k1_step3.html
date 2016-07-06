@@ -36,7 +36,7 @@
 
             <div class="spacer_10"></div>
 
-            <div id="error" class="form-group-error" >
+        <!--    <div id="error" class="form-group-error" >
                 <span class="error-message">
                     The key number is invalid.
                 </span>
@@ -45,6 +45,11 @@
                     <label class="form_label">Key number</label>
                     <input class="form_textfield" type="text" id="KN" onkeyup="getAppnDetl()" autofocus>
                 </div>
+            </div> -->
+
+            <div class="form" id="keyNum">
+                <label class="form_label">Key number</label>
+                <input class="form_textfield" type="text" id="KN" onkeyup="getAppnDetl()" autofocus>
             </div>
 
             <div class="form">
@@ -57,6 +62,23 @@
                 <p class="text_indent">This information must be provided.<br>If dispatch address is different, please overkey.</p>
                 <textarea class="form_textmemo" rows="5" id="address"></textarea>
             </div>
+
+            <p class="text_24_bold">Address type</p>
+
+            <div class="spacer_10"></div>
+
+            <fieldset class="inline">
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="dx" id="DX"><span class="text_16">DX Address</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="block-label">
+                        <input type="radio" value="post" ><span class="text_16">Postal Address</span>
+                    </label>
+                </div>
+            </fieldset>
 
             <div class="form">
                 <label class="form_label">Conveyancer reference</label>
@@ -175,7 +197,7 @@
                 document.getElementById("name").value = "Harrison Hill";
                 document.getElementById("address").value = "47 George Street \nBrundall \nNR13 4QL";
                 document.getElementById("ref").focus();
-                document.getElementById("DD").checked = true;
+                document.getElementById("DX").checked = true;
             }
         }
     }
