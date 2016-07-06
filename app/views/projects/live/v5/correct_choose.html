@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+	<link rel="stylesheet" href="/public/stylesheets/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+	<div class="spacer_10"></div>
+	<h1 class="title_36">Correction</h1>
+
+	<div class="spacer_30"></div>
+
+	<div class="grid-row">
+		<div class="column-form">
+			<label class="text_24_bold">Bankruptcy or Land Charge correction?</label>
+			<p class="text_indent">
+				This page is not part of the design - it's only a stepping stone to view either bankruptcy or land charge
+				correction. In the build, either the land charge or bankruptcy pages will be shown dependant on the
+				registration number entered.
+			</p>
+
+			<div class="spacer_10"></div>
+
+			<div class="form">
+				<fieldset class="inline">
+					<legend class="visuallyhidden">correct_type</legend>
+
+					<label class="block-label" for="bank">
+						<input id="bank" type="radio" name="correctType" value="bank" onclick="bankOrLC()">
+						Bankruptcy
+					</label>
+					<label class="block-label" for="lc">
+						<input id="lc" type="radio" name="correctType" value="lc" onclick="bankOrLC()">
+						Land Charges
+					</label>
+				</fieldset>
+			</div>
+
+			<div class="spacer_30"></div>
+
+			<div>
+				<table>
+					<tr>
+						<td width="50%" class="no-line">
+							<div id="bankChoice">
+								<a href="correct_bank_step1"><input type="submit" id="btnBank" value="Continue" class="form_button" disabled></a>
+							</div>
+							<div id="lcChoice">
+								<a href="correct_lc_step1"><input type="submit" id="btnLC" value="Continue" class="form_button" disabled></a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+		<div id="form_page">
+			<div id="page1">
+				<div id="zoomIn">
+					<p class="text_18" align="center">Please view application in Image Retrieval if required</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+
+<script>
+
+	function bankOrLC()
+	{
+		if (document.getElementById("bank").checked) {
+			document.getElementById("bankChoice").style.display = 'block';
+			document.getElementById("btnBank").disabled = false;
+			document.getElementById("lcChoice").style.display = 'none';
+		}
+
+		if (document.getElementById("lc").checked) {
+			document.getElementById("bankChoice").style.display = 'none';
+			document.getElementById("btnLC").disabled = false;
+			document.getElementById("lcChoice").style.display = 'block';
+		}
+	}
+
+	document.getElementById("lcChoice").style.display = 'none';
+
+</script>
+<script>
+
+	function add_additional_name()
+	{
+	  if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name1").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name2").style.display = 'none';
+	  }
+
+	  else if (document.getElementById("add").style.display == 'block'){
+	    document.getElementById("name3").style.display = 'none';
+	  }
+
+	}
+
+	document.getElementById("name1").style.display = 'none';
+	document.getElementById("name2").style.display = 'none';
+	document.getElementById("name3").style.display = 'none';
+
+</script>
+<script>
+
+	function addAdditionalAddress()
+	{
+	  if (document.getElementById("address1").style.display == 'none')
+	  {
+	    document.getElementById("address1").style.display = 'block';
+	  }
+
+	  else if (document.getElementById("address1").style.display == 'block')
+	  {
+	    document.getElementById("address2").style.display = 'block';
+	  }
+	}
+
+	document.getElementById("address1").style.display = 'none';
+	document.getElementById("address2").style.display = 'none';
+
+</script>
+<script>
+
+	function show(column)
+	{
+
+		if (column == 'zoomIn'){
+			document.getElementById("zoomIn").style.display = 'block';
+			document.getElementById("zoomOut").style.display = 'none';
+			document.getElementById("zoomInp2").style.display = 'block';
+			document.getElementById("zoomOutp2").style.display = 'none';
+		} 	else if (column == 'zoomOut'){
+			document.getElementById("zoomOut").style.display = 'block';
+			document.getElementById("zoomIn").style.display = 'none';
+			document.getElementById("zoomOutp2").style.display = 'block';
+			document.getElementById("zoomInp2").style.display = 'none';
+		} 	else if (column == 'page1'){
+			document.getElementById("page1").style.display = 'block';
+			document.getElementById("page2").style.display = 'none';
+			show('zoomIn');
+		} else if (column == 'page2'){
+			document.getElementById("page2").style.display = 'block';
+			document.getElementById("page1").style.display = 'none';
+			show('zoomIn');
+		} 
+
+	}
+
+	document.getElementById("zoomOut").style.display = 'none';
+	document.getElementById("page2").style.display = 'none';
+
+</script>
+
+<script>
+
+  /*  window.onscroll = function() {myFunction()};
+
+    function myFunction()
+    {
+        if (document.body.scrollTop > 230)
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width content-fixed";
+        }
+        else
+        {
+            document.getElementById("form_page").className = "column-scan2 form-width";
+        }
+    } */
+
+</script>
+
+
+
+<!--<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Debtor name</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_debtor_name">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Quinton Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">AKA</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_AKA">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Calista Anderson</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">Quinton Calista Nadar</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Occupation</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_occ">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">Psychiatrist</span></td>
+					<td colspan="2" class="table_text_black link_16_right"></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Address(es)</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="edit_address">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table">10318 Bill Crossing<br>Brakuston<br>Leopoldshire<br>Essex<br>UN48 7XX</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="#">Remove</a></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table">17 Golden Knowes Road<br>FRITH<br>Durham<br>ME13 9AY</span></td>
+					<td colspan="2" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_no_add2">Remove</a></td>
+				</tr>
+			</table>
+
+			<div class="spacer_20"></div>
+
+			<table class="review_table">
+				<tr>
+					<th colspan="2" class="table_text_black"><span class="text_19_bold">Court details</span></th>
+					<th colspan="1" class="table_text_black link_16_right"><a class="link_16_right" href="lrrabo_step2_edit">Change</a></th>
+				</tr>
+				<tr>
+					<td width="50%"><span class="text_review_table_bold">Court name</span></td>
+					<td width="50%"><span class="text_review_table">Harlow County Court</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Reference</span></td>
+					<td colspan="2"><span class="text_review_table">38 of 2014</span></td>
+				</tr>
+				<tr>
+					<td colspan="1"><span class="text_review_table_bold">Year</span></td>
+					<td colspan="2"><span class="text_review_table">2014</span></td>
+				</tr>
+			</table>
+
+			<div class="spacer_30"></div> -->
+
+</html>
