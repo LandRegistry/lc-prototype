@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<title>Digital Land Charges</title>
+
+<head>
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+{{>includes/header}}
+
+<div id="content">
+    <div class="spacer_10"></div>
+    <h1 class="title_36">Historical Enquiry</h1>
+
+    <div class="spacer_30"></div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <p class="text_24_bold">History for 47183</p>
+            <div class="spacer_20"></div>
+
+            <table>
+                <tr>
+                    <th class="table_text_black">Registered date</th>
+                    <th class="table_text_black">Registration number</th>
+                    <th class="table_text_black">Application type</th>
+                    <th class="table_text_black">RACF</th>
+                </tr>
+                <tr>
+                    <td>2 October 2015</td>
+                    <td>36251</td>
+                    <td>New registration</td>
+                    <td>AB999CD</td>
+                </tr>
+                <tr>
+                    <td>22 October 2015</td>
+                    <td>47183</td>
+                    <td>Rectification</td>
+                    <td>EF111GH</td>
+                </tr>
+            </table>
+
+            <div class="spacer_20"></div>
+
+            <table>
+                <tr>
+                    <td class="custom_3">
+                          <a href="hist_enq" class="link_16">Search for another</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{{>includes/footer}}
+
+</body>
+
+<script>
+
+    function showForm() {
+        document.getElementById("form").style.display = 'block';
+        document.getElementById("button").style.display = 'block';
+    }
+
+    document.getElementById("form").style.display = 'none';
+    document.getElementById("button").style.display = 'none';
+
+</script>
+
+</html>
+
